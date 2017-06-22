@@ -260,11 +260,10 @@ public class AssignmentFragment extends android.support.v4.app.Fragment {
                     jsonObjectToFetchAssignment.addProperty("status", "Normal");
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(" Inside Assignment Fragment Catch");
             System.out.println(e.getMessage());
         }
-
 
         System.out.println("jsonObjectToFetchAssignment " + jsonObjectToFetchAssignment);
     }
@@ -362,21 +361,25 @@ public class AssignmentFragment extends android.support.v4.app.Fragment {
 
         System.out.println(" mainManager.getSharedPrefItem(SessionManager.KEY_ASSIGNMENT_JSON) " + sessionManager.getSharedPrefItem(SessionManager.KEY_ASSIGNMENT_JSON));
 
-        //Set Data in Subject spinner
-
-        getSubjectListCursor.moveToFirst();
-        for (int getsubjectloop = 0; getsubjectloop < getSubjectListCursor.getCount(); getsubjectloop++) {
-            if (!subjectList.contains(getSubjectListCursor.getString(getSubjectListCursor.getColumnIndex("subject")))) {
-                subjectList.add(getSubjectListCursor.getString(getSubjectListCursor.getColumnIndex("subject")));
+        try {
+            //Set Data in Subject spinner
+            getSubjectListCursor.moveToFirst();
+            for (int getsubjectloop = 0; getsubjectloop < getSubjectListCursor.getCount(); getsubjectloop++) {
+                if (!subjectList.contains(getSubjectListCursor.getString(getSubjectListCursor.getColumnIndex("subject")))) {
+                    subjectList.add(getSubjectListCursor.getString(getSubjectListCursor.getColumnIndex("subject")));
+                }
+                getSubjectListCursor.moveToNext();
             }
-            getSubjectListCursor.moveToNext();
-        }
-        subjectList.add("[ Select Subject ]");
+            subjectList.add("[ Select Subject ]");
 
-        subjectAdapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item, subjectList);
-        subjectAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
-        selectedSubjectSpinner.setAdapter(subjectAdapter);
-        selectedSubjectSpinner.setSelection(subjectAdapter.getCount() - 1);
+            subjectAdapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item, subjectList);
+            subjectAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+            selectedSubjectSpinner.setAdapter(subjectAdapter);
+            selectedSubjectSpinner.setSelection(subjectAdapter.getCount() - 1);
+        } catch (Exception e) {
+            System.out.println(" Exception Assignment " + e.getMessage());
+        }
+
 
         /*
         Start fetching Data
@@ -493,7 +496,7 @@ public class AssignmentFragment extends android.support.v4.app.Fragment {
                 onExecutionStart();
 
             } else {
-                Toast.makeText(getActivity(), "No network connection..!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(),R.string.no_internet, Toast.LENGTH_LONG).show();
             }
         } else {
 
@@ -564,7 +567,6 @@ public class AssignmentFragment extends android.support.v4.app.Fragment {
                     System.out.println("Post Execute Catch Error");
                     timeOutTimerClass.check = false;
                 }
-
 
             }
         });
@@ -762,7 +764,6 @@ public class AssignmentFragment extends android.support.v4.app.Fragment {
             e.printStackTrace();
 
         }
-
     }
 
     /*
@@ -800,7 +801,6 @@ public class AssignmentFragment extends android.support.v4.app.Fragment {
         }
 
         System.out.println("pendingIntentList-------------" + pendingIntentList);
-
     }
 
 
@@ -814,7 +814,6 @@ public class AssignmentFragment extends android.support.v4.app.Fragment {
             AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
             alarmManager.cancel(pendingIntentList.get(loop));
         }
-
     }
 
 
@@ -896,7 +895,7 @@ public class AssignmentFragment extends android.support.v4.app.Fragment {
 
                 if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK) {
 
-                    // handle back buttson
+                    // handle back button
                     if (userRole.equals("Teacher")) {
                         mFragment = new DashboardTeacherFragment();
                         fragmentManager = getFragmentManager();
@@ -1002,21 +1001,21 @@ public class AssignmentFragment extends android.support.v4.app.Fragment {
     public static class SelectDateFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
         private String datee;
         private int yy, mm, dd;
-        private Date aasa;
+        private Date dateTemp;
 
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             final Calendar calendar = Calendar.getInstance();
 
             if (AssignmentFragment.flag == 1) {
-                aasa = date;
+                dateTemp = date;
             } else {
-                aasa = date;
+                dateTemp = date;
             }
 
-            System.out.println("aasa" + aasa);
+            System.out.println("dateTemp" + dateTemp);
 
-            calendar.setTime(aasa);
+            calendar.setTime(dateTemp);
             yy = calendar.get(Calendar.YEAR);
             mm = calendar.get(Calendar.MONTH);
             dd = calendar.get(Calendar.DAY_OF_MONTH);

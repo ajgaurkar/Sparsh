@@ -160,7 +160,7 @@ public class AlertFragment extends android.support.v4.app.Fragment implements Sw
                 onExecutionStart();
 
             } else {
-                Toast.makeText(getActivity(),R.string.no_internet, Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), R.string.no_internet, Toast.LENGTH_LONG).show();
             }
         } else {
 
@@ -315,8 +315,8 @@ public class AlertFragment extends android.support.v4.app.Fragment implements Sw
                     System.out.println(" else flagRefresh " + flagRefresh);
                 }
             }
-        }else {
-            Toast.makeText(getActivity(),R.string.no_internet, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getActivity(), R.string.no_internet, Toast.LENGTH_LONG).show();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -365,81 +365,81 @@ public class AlertFragment extends android.support.v4.app.Fragment implements Sw
     }
 
 
-
     private void parseJSONAndPopulate(JsonElement alertFetchResponse) {
 
-        if (alertFetchResponse == null) {
-            System.out.println("alertFetchResponse Null  @@@@@@ @@@@@@@@ @@@@@@ @@@" + alertFetchResponse);
-            timeOutTimerClass.check = false;
-        } else {
-            System.out.println("alertFetchResponse  NOT Null  @@@@@@ @@@@@@@@ @@@@@@ @@@" + alertFetchResponse);
-            timeOutTimerClass.check = true;
-        }
-        JsonArray alertJsonArray = alertFetchResponse.getAsJsonArray();
-        System.out.println("alertJsonArray.size() : " + alertJsonArray.size());
+        try {
+
+            if (alertFetchResponse == null) {
+                System.out.println("alertFetchResponse Null  @@@@@@ @@@@@@@@ @@@@@@ @@@" + alertFetchResponse);
+                timeOutTimerClass.check = false;
+            } else {
+                System.out.println("alertFetchResponse  NOT Null  @@@@@@ @@@@@@@@ @@@@@@ @@@" + alertFetchResponse);
+                timeOutTimerClass.check = true;
+            }
+            JsonArray alertJsonArray = alertFetchResponse.getAsJsonArray();
+            System.out.println("alertJsonArray.size() : " + alertJsonArray.size());
         /*
                             Alert Json Parsing Start.
          */
-        if (alertJsonArray.size() != 0) {
-            System.out.println("Alert Json Array Size ZERO");
-            noDataAvailableTextView.setVisibility(View.INVISIBLE);
+            if (alertJsonArray.size() != 0) {
+                System.out.println("Alert Json Array Size ZERO");
+                noDataAvailableTextView.setVisibility(View.INVISIBLE);
 
 
-            for (int i = 0; i < alertJsonArray.size(); i++) {
-                System.out.println("inf loop--------------------------");
-                JsonObject jsonObjectForIteration = alertJsonArray.get(i).getAsJsonObject();
+                for (int i = 0; i < alertJsonArray.size(); i++) {
+                    System.out.println("inf loop--------------------------");
+                    JsonObject jsonObjectForIteration = alertJsonArray.get(i).getAsJsonObject();
 
-                System.out.println("Title ; " + jsonObjectForIteration.get("Title").toString().replace("\"", ""));
-                System.out.println("category ; " + jsonObjectForIteration.get("Category").toString().replace("\"", ""));
-                System.out.println("class ; " + jsonObjectForIteration.get("Alert_class").toString().replace("\"", ""));
-                System.out.println("divison ; " + jsonObjectForIteration.get("alert_divison").toString().replace("\"", ""));
-                System.out.println("Teacher_id ; " + jsonObjectForIteration.get("Teacher_id").toString().replace("\"", ""));
-                System.out.println("Postdate ; " + jsonObjectForIteration.get("Postdate").toString().replace("\"", ""));
-                String alertDescription = jsonObjectForIteration.get("Alert_description").toString().replace("\\n", "\n");
-                System.out.println("alert_description ; " + alertDescription.substring(1, alertDescription.length() - 1));
-                String postDate = jsonObjectForIteration.get("Postdate").toString().replace("\"", "");
+                    System.out.println("Title ; " + jsonObjectForIteration.get("Title").toString().replace("\"", ""));
+                    System.out.println("category ; " + jsonObjectForIteration.get("Category").toString().replace("\"", ""));
+                    System.out.println("class ; " + jsonObjectForIteration.get("Alert_class").toString().replace("\"", ""));
+                    System.out.println("divison ; " + jsonObjectForIteration.get("alert_divison").toString().replace("\"", ""));
+                    System.out.println("Teacher_id ; " + jsonObjectForIteration.get("Teacher_id").toString().replace("\"", ""));
+                    System.out.println("Postdate ; " + jsonObjectForIteration.get("Postdate").toString().replace("\"", ""));
+                    String alertDescription = jsonObjectForIteration.get("Alert_description").toString().replace("\\n", "\n");
+                    System.out.println("alert_description ; " + alertDescription.substring(1, alertDescription.length() - 1));
+                    String postDate = jsonObjectForIteration.get("Postdate").toString().replace("\"", "");
 
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss.SSS'Z'", Locale.getDefault());
-                dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
-                try {
-                    SimpleDateFormat targetDateFormat = new SimpleDateFormat("d MMM yy hh:mm a", Locale.getDefault());
-                    Date datepost = dateFormat.parse(postDate);
-                    targetDateFormat.setTimeZone(TimeZone.getDefault());
-                    postDate = targetDateFormat.format(datepost);
-
-                    Log.d("Post Date ", "111   " + postDate);
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-
-                //differentiation, because different data is to shown on alert list according to user role
-                if (userRole.equals("Teacher")) {
-
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss.SSS'Z'", Locale.getDefault());
+                    dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
                     try {
+                        SimpleDateFormat targetDateFormat = new SimpleDateFormat("d MMM yy hh:mm a", Locale.getDefault());
+                        Date datepost = dateFormat.parse(postDate);
+                        targetDateFormat.setTimeZone(TimeZone.getDefault());
+                        postDate = targetDateFormat.format(datepost);
 
-                        alertData = new AlertListData(postDate,
-                                jsonObjectForIteration.get("Title").toString().replace("\"", ""),
-                                alertDescription.substring(1, alertDescription.length() - 1), "",
-                                jsonObjectForIteration.get("Category").toString().replace("\"", ""),
-                                jsonObjectForIteration.get("Alert_class").toString().replace("\"", ""),
-                                jsonObjectForIteration.get("alert_divison").toString().replace("\"", ""),
-                                jsonObjectForIteration.get("firstName").toString().replace("\"", "") + " " + jsonObjectForIteration.get("lastName").toString().replace("\"", ""),
-                                jsonObjectForIteration.get("Student_id").toString().replace("\"", ""),
-                                jsonObjectForIteration.get("id").toString().replace("\"", ""),
-                                jsonObjectForIteration.get("Attachment_count").toString().replace("\"", ""), jsonObjectForIteration.get("Alert_priority").toString().replace("\"", ""));
-
-
-
-                    } catch (Exception e) {
-                        System.out.println("alertData-----" + alertData);
-                        System.out.println("Error in Alert Data---" + e.getMessage());
+                        Log.d("Post Date ", "111   " + postDate);
+                    } catch (ParseException e) {
+                        e.printStackTrace();
                     }
 
+                    //differentiation, because different data is to shown on alert list according to user role
+                    if (userRole.equals("Teacher")) {
 
-                }
-                if (userRole.equals("Student")) {
-                    System.out.println("firstName ; " + jsonObjectForIteration.get("firstName").toString().replace("\"", ""));
-                    System.out.println("lastName ; " + jsonObjectForIteration.get("lastName").toString().replace("\"", ""));
+                        try {
+
+                            alertData = new AlertListData(postDate,
+                                    jsonObjectForIteration.get("Title").toString().replace("\"", ""),
+                                    alertDescription.substring(1, alertDescription.length() - 1), "",
+                                    jsonObjectForIteration.get("Category").toString().replace("\"", ""),
+                                    jsonObjectForIteration.get("Alert_class").toString().replace("\"", ""),
+                                    jsonObjectForIteration.get("alert_divison").toString().replace("\"", ""),
+                                    jsonObjectForIteration.get("firstName").toString().replace("\"", "") + " " + jsonObjectForIteration.get("lastName").toString().replace("\"", ""),
+                                    jsonObjectForIteration.get("Student_id").toString().replace("\"", ""),
+                                    jsonObjectForIteration.get("id").toString().replace("\"", ""),
+                                    jsonObjectForIteration.get("Attachment_count").toString().replace("\"", ""), jsonObjectForIteration.get("Alert_priority").toString().replace("\"", ""));
+
+
+                        } catch (Exception e) {
+                            System.out.println("alertData-----" + alertData);
+                            System.out.println("Error in Alert Data---" + e.getMessage());
+                        }
+
+
+                    }
+                    if (userRole.equals("Student")) {
+                        System.out.println("firstName ; " + jsonObjectForIteration.get("firstName").toString().replace("\"", ""));
+                        System.out.println("lastName ; " + jsonObjectForIteration.get("lastName").toString().replace("\"", ""));
 
 //                    alertData = new AlertListData(postDate,
 //                            jsonObjectForIteration.get("Title").toString().replace("\"", ""),
@@ -451,31 +451,34 @@ public class AlertFragment extends android.support.v4.app.Fragment implements Sw
 //                            jsonObjectForIteration.get("Alert_priority").toString().replace("\"", "")
 //                    );
 
-                    alertData = new AlertListData(postDate,
-                            jsonObjectForIteration.get("Title").toString().replace("\"", ""),
-                            alertDescription.substring(1, alertDescription.length() - 1),
-                            jsonObjectForIteration.get("firstName").toString().replace("\"", "") + " " + jsonObjectForIteration.get("lastName").toString().replace("\"", ""),
-                            jsonObjectForIteration.get("Category").toString().replace("\"", ""),
-                            "", "", "", "", jsonObjectForIteration.get("id").toString().replace("\"", ""), jsonObjectForIteration.get("Attachment_count").toString().replace("\"", ""), jsonObjectForIteration.get("Alert_priority").toString().replace("\"", "")
-                    );
-                }
+                        alertData = new AlertListData(postDate,
+                                jsonObjectForIteration.get("Title").toString().replace("\"", ""),
+                                alertDescription.substring(1, alertDescription.length() - 1),
+                                jsonObjectForIteration.get("firstName").toString().replace("\"", "") + " " + jsonObjectForIteration.get("lastName").toString().replace("\"", ""),
+                                jsonObjectForIteration.get("Category").toString().replace("\"", ""),
+                                "", "", "", "", jsonObjectForIteration.get("id").toString().replace("\"", ""), jsonObjectForIteration.get("Attachment_count").toString().replace("\"", ""), jsonObjectForIteration.get("Alert_priority").toString().replace("\"", "")
+                        );
+                    }
 
-                alertList.add(0, alertData);
+                    alertList.add(0, alertData);
+                }
+            } else {
+                noDataAvailableTextView.setVisibility(View.VISIBLE);
+                System.out.println("Alert Json  is null");
             }
-        } else {
-            noDataAvailableTextView.setVisibility(View.VISIBLE);
-            System.out.println("Alert Json  is null");
-        }
 
 
          /* Alert Json Parsing End.
             And Prepare List to show user3
          */
-        flagRefresh = true;
-        alertAdapter = new AlertAdapterAdapter(getActivity(), alertList);
-        listViewAlerts.setAdapter(alertAdapter);
-        progressDialog.dismiss();
-        alertTimelineStick.setVisibility(View.VISIBLE);
+            flagRefresh = true;
+            alertAdapter = new AlertAdapterAdapter(getActivity(), alertList);
+            listViewAlerts.setAdapter(alertAdapter);
+            progressDialog.dismiss();
+            alertTimelineStick.setVisibility(View.VISIBLE);
+        } catch (Exception e) {
+            System.out.println("Catch AlertFragment " + e.getMessage());
+        }
 
     }
 
@@ -488,7 +491,7 @@ public class AlertFragment extends android.support.v4.app.Fragment implements Sw
             alert_Handler.post(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println("Alert Timmer Class check Variable  " + check);
+                    System.out.println("Alert Timer Class check Variable  " + check);
                     if (!check) {
                         //fetchAlertDataTask.cancel(true);
                         alert_Timer.cancel();
@@ -533,16 +536,13 @@ public class AlertFragment extends android.support.v4.app.Fragment implements Sw
                                     }).setMessage(R.string.check_network).create().show();
 
                         } catch (Exception e) {
-                            /*
-                                    it may produce null pointer exception on creation of alert dialog object
+                            /* it may produce null pointer exception on creation of alert dialog object
                              */
                             System.out.println("Exception Handle for Alert Dialog");
                         }
-
                     } else {
                         /*   this line of code is used when everything goes normal.
-                             and cancel the timer.
-                         */
+                             and cancel the timer.*/
                         alert_Timer.cancel();
                     }
                 }
