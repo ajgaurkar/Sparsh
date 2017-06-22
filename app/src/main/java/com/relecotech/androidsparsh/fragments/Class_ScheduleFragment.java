@@ -327,50 +327,55 @@ public class Class_ScheduleFragment extends android.support.v4.app.Fragment {
 
     private void fetch_class_schedule_data() {
 
-        jsonObjectClassScheFrag.addProperty("studentId", userDetails.get(SessionManager.KEY_STUDENT_ID));
-        jsonObjectClassScheFrag.addProperty("Teacher_Regs_Id", userDetails.get(SessionManager.KEY_TEACHER_RECORD_ID));
-        jsonObjectClassScheFrag.addProperty("UserRole", userDetails.get(SessionManager.KEY_USER_ROLE));
-        jsonObjectClassScheFrag.addProperty("Student_School_Class_Id", userDetails.get(SessionManager.KEY_SCHOOL_CLASS_ID));
+        try {
 
-        final SettableFuture<JsonElement> resultFuture = SettableFuture.create();
-        ListenableFuture<JsonElement> serviceFilterFuture = MainActivity.mClient.invokeApi("classScheduleMainApi", jsonObjectClassScheFrag);
+            jsonObjectClassScheFrag.addProperty("studentId", userDetails.get(SessionManager.KEY_STUDENT_ID));
+            jsonObjectClassScheFrag.addProperty("Teacher_Regs_Id", userDetails.get(SessionManager.KEY_TEACHER_RECORD_ID));
+            jsonObjectClassScheFrag.addProperty("UserRole", userDetails.get(SessionManager.KEY_USER_ROLE));
+            jsonObjectClassScheFrag.addProperty("Student_School_Class_Id", userDetails.get(SessionManager.KEY_SCHOOL_CLASS_ID));
 
-        Futures.addCallback(serviceFilterFuture, new FutureCallback<JsonElement>() {
-            @Override
-            public void onFailure(Throwable exception) {
-                resultFuture.setException(exception);
-                System.out.println("exception    " + exception);
-            }
+            final SettableFuture<JsonElement> resultFuture = SettableFuture.create();
+            ListenableFuture<JsonElement> serviceFilterFuture = MainActivity.mClient.invokeApi("classScheduleMainApi", jsonObjectClassScheFrag);
 
-            @Override
-            public void onSuccess(JsonElement Response) {
-                resultFuture.set(Response);
-                System.out.println(" class_Schedule_Response_JsonElement  API   response    " + Response);
-                //set json response to shared pref
-
-                class_Schedule_Response_JsonElement = Response;
-                if (userRole.equals("Teacher")) {
-                    try {
-                        sessionManager.setSharedPrefItem(SessionManager.KEY_CLASS_SCHEDULE_JSON, class_Schedule_Response_JsonElement.toString());
-
-                    } catch (Exception e) {
-                        System.out.println("null pointer exception *********************");
-
-                    }
-                } else if (userRole.equals("Student")) {
-                    try {
-                        sessionManager.setSharedPrefItem(SessionManager.KEY_CLASS_SCHEDULE_JSON, class_Schedule_Response_JsonElement.toString());
-
-                    } catch (Exception e) {
-                        System.out.println("null pointer exception *********************");
-
-                    }
-
+            Futures.addCallback(serviceFilterFuture, new FutureCallback<JsonElement>() {
+                @Override
+                public void onFailure(Throwable exception) {
+                    resultFuture.setException(exception);
+                    System.out.println("exception    " + exception);
                 }
-                Class_Schedule_JSON_Parsing(class_Schedule_Response_JsonElement);
 
-            }
-        });
+                @Override
+                public void onSuccess(JsonElement Response) {
+                    resultFuture.set(Response);
+                    System.out.println(" class_Schedule_Response_JsonElement  API   response    " + Response);
+                    //set json response to shared pref
+
+                    class_Schedule_Response_JsonElement = Response;
+                    if (userRole.equals("Teacher")) {
+                        try {
+                            sessionManager.setSharedPrefItem(SessionManager.KEY_CLASS_SCHEDULE_JSON, class_Schedule_Response_JsonElement.toString());
+
+                        } catch (Exception e) {
+                            System.out.println("null pointer exception *********************");
+
+                        }
+                    } else if (userRole.equals("Student")) {
+                        try {
+                            sessionManager.setSharedPrefItem(SessionManager.KEY_CLASS_SCHEDULE_JSON, class_Schedule_Response_JsonElement.toString());
+
+                        } catch (Exception e) {
+                            System.out.println("null pointer exception *********************");
+
+                        }
+
+                    }
+                    Class_Schedule_JSON_Parsing(class_Schedule_Response_JsonElement);
+                }
+            });
+
+        } catch (Exception e) {
+            System.out.println("Exception in Class Schedule Fragment " + e.getMessage());
+        }
     }
 
 

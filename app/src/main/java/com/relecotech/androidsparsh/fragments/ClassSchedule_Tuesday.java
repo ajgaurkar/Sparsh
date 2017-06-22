@@ -66,38 +66,45 @@ public class ClassSchedule_Tuesday extends Fragment {
 
 
             if (userRole.equals("Student")) {
-                System.out.println("userRole       :: " + "Student");
-                for (Map.Entry<Integer, StudentTimeTableListData> entrys : slotWiseMap.entrySet()) {
-                    System.out.println("Slot No        :: " + entrys.getKey());
-                    System.out.println("Start Time     :: " + entrys.getValue().getSlot_StartTime());
-                    System.out.println("End Time       :: " + entrys.getValue().getSlot_EndTime());
-                    System.out.println("Subject        :: " + entrys.getValue().getSlot_Subject());
-                    System.out.println("teacher name        :: " + entrys.getValue().getSubject_teacher_name());
-                    System.out.println("slot type        :: " + entrys.getValue().getSlot_type());
+
+                try {
 
 
-                    start_time = entrys.getValue().getSlot_StartTime();
-                    end_time = entrys.getValue().getSlot_EndTime();
-                    subject = entrys.getValue().getSlot_Subject();
-                    subject_teacher_name = entrys.getValue().getSubject_teacher_name();
-                    slot_type = entrys.getValue().getSlot_type();
-                    teacher_class_division = null;
+                    System.out.println("userRole       :: " + "Student");
+                    for (Map.Entry<Integer, StudentTimeTableListData> entrys : slotWiseMap.entrySet()) {
+                        System.out.println("Slot No        :: " + entrys.getKey());
+                        System.out.println("Start Time     :: " + entrys.getValue().getSlot_StartTime());
+                        System.out.println("End Time       :: " + entrys.getValue().getSlot_EndTime());
+                        System.out.println("Subject        :: " + entrys.getValue().getSlot_Subject());
+                        System.out.println("teacher name        :: " + entrys.getValue().getSubject_teacher_name());
+                        System.out.println("slot type        :: " + entrys.getValue().getSlot_type());
 
 
-                    studentTimeTableList.add(new StudentTimeTableListData(start_time, end_time, subject, subject_teacher_name, slot_type, teacher_class_division, false));
+                        start_time = entrys.getValue().getSlot_StartTime();
+                        end_time = entrys.getValue().getSlot_EndTime();
+                        subject = entrys.getValue().getSlot_Subject();
+                        subject_teacher_name = entrys.getValue().getSubject_teacher_name();
+                        slot_type = entrys.getValue().getSlot_type();
+                        teacher_class_division = null;
 
+
+                        studentTimeTableList.add(new StudentTimeTableListData(start_time, end_time, subject, subject_teacher_name, slot_type, teacher_class_division, false));
+
+                    }
+                } catch (Exception e) {
+                    System.out.println("Exception---------" + e.getMessage());
                 }
             }
             if (userRole.equals("Teacher")) {
                 System.out.println("userRole       :: " + "Teacher");
-
-                System.out.println("slotWiseMap.keySet()     :: " + slotWiseMap.keySet());
-                System.out.println("slotWiseMap.LEngth     :: " + slotWiseMap.size());
-                Map.Entry<Integer, StudentTimeTableListData> entry = slotWiseMap.entrySet().iterator().next();
-                Integer key = entry.getKey();
-
-                System.out.println("Tuesday First Key___________" + key);
                 try {
+                    System.out.println("slotWiseMap.keySet()     :: " + slotWiseMap.keySet());
+                    System.out.println("slotWiseMap.LEngth     :: " + slotWiseMap.size());
+                    Map.Entry<Integer, StudentTimeTableListData> entry = slotWiseMap.entrySet().iterator().next();
+                    Integer key = entry.getKey();
+
+                    System.out.println("Tuesday First Key___________" + key);
+
                     Date prev_endTime = slotWiseMap.get(key).getSlot_StartTime();
                     System.out.println("prev_endTime 1 **********************************" + prev_endTime);
 

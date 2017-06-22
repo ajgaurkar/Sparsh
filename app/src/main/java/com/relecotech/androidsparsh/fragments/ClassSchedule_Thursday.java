@@ -64,6 +64,9 @@ public class ClassSchedule_Thursday extends Fragment {
 
 
             if (userRole.equals("Student")) {
+                try {
+
+
                 System.out.println("userRole       :: " + "Student");
                 for (Map.Entry<Integer, StudentTimeTableListData> entrys : slotWiseMap.entrySet()) {
                     System.out.println("Slot No        :: " + entrys.getKey());
@@ -84,6 +87,9 @@ public class ClassSchedule_Thursday extends Fragment {
 
                     studentTimeTableList.add(new StudentTimeTableListData(start_time, end_time, subject, subject_teacher_name, slot_type, teacher_class_division, false));
 
+                }
+                } catch (Exception e) {
+                    System.out.println("Exception---------" + e.getMessage());
                 }
             }
             if (userRole.equals("Teacher")) {

@@ -189,10 +189,9 @@ public class DashboardTeacherFragment extends android.support.v4.app.Fragment {
         return super.onOptionsItemSelected(item);
     }
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.dashboard_teacher, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 
+        View rootView = inflater.inflate(R.layout.dashboard_teacher, container, false);
 
         // Clickable views of all xml views
         noticeView = rootView.findViewById(R.id.viewForNoticeClick);

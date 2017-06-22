@@ -66,25 +66,29 @@ public class ClassSchedule_Friday extends Fragment {
 
             if (userRole.equals("Student")) {
                 System.out.println("userRole       :: " + "Student");
-                for (Map.Entry<Integer, StudentTimeTableListData> entrys : slotWiseMap.entrySet()) {
-                    System.out.println("Slot No        :: " + entrys.getKey());
-                    System.out.println("Start Time     :: " + entrys.getValue().getSlot_StartTime());
-                    System.out.println("End Time       :: " + entrys.getValue().getSlot_EndTime());
-                    System.out.println("Subject        :: " + entrys.getValue().getSlot_Subject());
-                    System.out.println("teacher name        :: " + entrys.getValue().getSubject_teacher_name());
-                    System.out.println("slot type        :: " + entrys.getValue().getSlot_type());
+                try {
+                    for (Map.Entry<Integer, StudentTimeTableListData> entrys : slotWiseMap.entrySet()) {
+                        System.out.println("Slot No        :: " + entrys.getKey());
+                        System.out.println("Start Time     :: " + entrys.getValue().getSlot_StartTime());
+                        System.out.println("End Time       :: " + entrys.getValue().getSlot_EndTime());
+                        System.out.println("Subject        :: " + entrys.getValue().getSlot_Subject());
+                        System.out.println("teacher name        :: " + entrys.getValue().getSubject_teacher_name());
+                        System.out.println("slot type        :: " + entrys.getValue().getSlot_type());
 
 
-                    start_time = entrys.getValue().getSlot_StartTime();
-                    end_time = entrys.getValue().getSlot_EndTime();
-                    subject = entrys.getValue().getSlot_Subject();
-                    subject_teacher_name = entrys.getValue().getSubject_teacher_name();
-                    slot_type = entrys.getValue().getSlot_type();
-                    teacher_class_division = null;
+                        start_time = entrys.getValue().getSlot_StartTime();
+                        end_time = entrys.getValue().getSlot_EndTime();
+                        subject = entrys.getValue().getSlot_Subject();
+                        subject_teacher_name = entrys.getValue().getSubject_teacher_name();
+                        slot_type = entrys.getValue().getSlot_type();
+                        teacher_class_division = null;
 
 
-                    studentTimeTableList.add(new StudentTimeTableListData(start_time, end_time, subject, subject_teacher_name, slot_type, teacher_class_division, false));
+                        studentTimeTableList.add(new StudentTimeTableListData(start_time, end_time, subject, subject_teacher_name, slot_type, teacher_class_division, false));
 
+                    }
+                } catch (Exception e) {
+                    System.out.println("Exception---------" + e.getMessage());
                 }
             }
             if (userRole.equals("Teacher")) {

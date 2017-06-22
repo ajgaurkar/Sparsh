@@ -90,7 +90,7 @@ public class Calendar_Attendance_Fragment extends Fragment {
                 holidayListView.setAdapter(adapter);
 
             }
-        } catch (NullPointerException nullException) {
+        } catch (Exception nullException) {
             nullException.printStackTrace();
         }
     }

@@ -167,11 +167,9 @@ public class Calendar_Fragment extends android.support.v4.app.Fragment implement
 
     }
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.calendar_student, container, false);
-        userRole = MainActivity.userRole;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        View rootView = inflater.inflate(R.layout.calendar_student, container, false);
 
         robotoCalendarView = (RobotoCalendarView) rootView.findViewById(R.id.robotoCalendarView);
 
@@ -346,7 +344,7 @@ public class Calendar_Fragment extends android.support.v4.app.Fragment implement
                     System.out.println("listLoopObj.getCalendarDate():  " + listLoopObj.getCalendarDate());
                 }
             }
-        } catch (NullPointerException nullException) {
+        } catch (Exception nullException) {
             nullException.printStackTrace();
         }
     }

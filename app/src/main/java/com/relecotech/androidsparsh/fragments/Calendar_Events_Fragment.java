@@ -134,7 +134,7 @@ public class Calendar_Events_Fragment extends Fragment {
                 eventListView.setAdapter(adapter);
 
             }
-        } catch (NullPointerException nullException) {
+        } catch (Exception nullException) {
             nullException.printStackTrace();
         }
 

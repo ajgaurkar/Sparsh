@@ -126,7 +126,7 @@ public class Calendar_Holidays_Fragment extends Fragment {
                 CalendarEntryListAdapter adapter = new CalendarEntryListAdapter(getActivity(), calendarHolidaysList);
                 holidaysListView.setAdapter(adapter);
             }
-        } catch (NullPointerException nullException) {
+        } catch (Exception nullException) {
             nullException.printStackTrace();
         }
     }

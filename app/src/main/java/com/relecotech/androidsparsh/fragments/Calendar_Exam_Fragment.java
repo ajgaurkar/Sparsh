@@ -125,7 +125,7 @@ public class Calendar_Exam_Fragment extends Fragment {
                 CalendarEntryListAdapter adapter = new CalendarEntryListAdapter(getActivity(), calendarExamList);
                 examListView.setAdapter(adapter);
             }
-        } catch (NullPointerException nullException) {
+        } catch (Exception nullException) {
             nullException.printStackTrace();
         }
 

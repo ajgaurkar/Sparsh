@@ -218,8 +218,7 @@ public class DashboardStudentFragment extends android.support.v4.app.Fragment {
     }
 
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.dashboard_student, container, false);
 
@@ -228,7 +227,7 @@ public class DashboardStudentFragment extends android.support.v4.app.Fragment {
 
 //        galleryView = (View) rootView.findViewById(R.id.viewForGalleryClick);
         completedProgressArc = (ArcProgress) rootView.findViewById(R.id.attendance_progress);
-        int attendance = 89;
+//        int attendance = 89;
 //        completedProgressArc.setProgress(attendance);
 
         // Clickable views of all xml views
@@ -282,7 +281,6 @@ public class DashboardStudentFragment extends android.support.v4.app.Fragment {
                 getDashboardData = new FetchData();
                 getDashboardData.execute();
                 //downloadProfilePic();
-                System.out.println("Download profile pic call ");
                 dashboard_data_Timer.schedule(dashboard_timeOutTimerClass, TIMEOUT_TIME, 1000);
                 System.out.println("Timer Task Calling>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
             } else {
