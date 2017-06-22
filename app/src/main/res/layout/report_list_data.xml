@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/exam"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/marks"
+        android:layout_toStartOf="@+id/marks"
+        android:gravity="center_vertical|start"
+        android:paddingStart="15dp"
+        android:text="Prelims"
+        android:textColor="#414141"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/marks"
+        android:layout_width="104dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="65/100"
+        android:textColor="#414141"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/grades"
+        android:layout_width="106dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/marks"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/marks"
+        android:layout_toRightOf="@+id/marks"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="#414141"
+        android:textStyle="bold" />
+</RelativeLayout>

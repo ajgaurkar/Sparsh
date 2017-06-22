@@ -1,0 +1,712 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_bg"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_bg"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+
+        <View
+            android:id="@+id/viewNotificationBg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/view_bg" />
+
+
+        <View
+            android:id="@+id/viewEventBg"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/viewNotificationBg"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/viewRewardBg"
+            android:layout_toRightOf="@+id/viewRewardBg"
+            android:background="@drawable/view_bg" />
+
+        <View
+            android:id="@+id/viewRewardBg"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewEventBg"
+            android:background="@drawable/view_bg" />
+
+        <View
+            android:id="@+id/viewGalleryBg"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewRewardBg"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/view_bg" />
+
+        <View
+            android:id="@+id/viewAlertBg"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewEventBg"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/view_bg" />
+
+        <View
+            android:id="@+id/viewAttendanceBg"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/viewAlertBg"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/viewAlertBg"
+            android:layout_toRightOf="@+id/viewAlertBg"
+            android:background="@drawable/view_bg" />
+
+        <View
+            android:id="@+id/viewParentZoneBg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewAlertBg"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/view_bg" />
+
+        <View
+            android:id="@+id/viewNotificationColor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/dash_title_blue" />
+
+
+        <TextView
+            android:id="@+id/textViewNotificationTitle"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/viewNotificationColor"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="Notifications"
+            android:textColor="#ffffff" />
+
+        <View
+            android:id="@+id/viewEventColor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/viewEventBg"
+            android:layout_alignStart="@+id/viewEventBg"
+            android:layout_alignTop="@+id/viewEventBg"
+            android:background="@drawable/dash_title_blue" />
+
+
+        <TextView
+            android:id="@+id/textViewEventTitle"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/viewEventColor"
+            android:layout_alignLeft="@+id/viewEventBg"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/viewEventBg"
+            android:layout_alignTop="@+id/viewEventBg"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="Events"
+            android:textColor="#ffffff" />
+
+
+        <View
+            android:id="@+id/viewRewardColor"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/viewEventColor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewRewardBg"
+            android:layout_toLeftOf="@+id/viewEventBg"
+            android:layout_toStartOf="@+id/viewEventBg"
+            android:background="@drawable/dash_title_blue" />
+
+        <TextView
+            android:id="@+id/textViewRewardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/viewRewardColor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewEventBg"
+            android:layout_toLeftOf="@+id/viewEventBg"
+            android:layout_toStartOf="@+id/viewEventBg"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="Rewards"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/rewardsImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/viewGalleryBg"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewRewardColor"
+            android:layout_toLeftOf="@+id/viewEventBg"
+            android:layout_toStartOf="@+id/viewEventBg"
+            android:onClick="openRewards"
+            android:src="@drawable/trophy" />
+
+        <View
+            android:id="@+id/viewGalleryColor"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewGalleryBg"
+            android:layout_toLeftOf="@+id/viewEventBg"
+            android:layout_toStartOf="@+id/viewEventBg"
+            android:background="@drawable/dash_title_blue" />
+
+
+        <TextView
+            android:id="@+id/textViewGalleryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/viewGalleryColor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/viewEventBg"
+            android:layout_toStartOf="@+id/viewEventBg"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="Gallery"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+
+        <ImageView
+            android:id="@+id/galleryClickImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/viewAlertBg"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewGalleryColor"
+            android:layout_toLeftOf="@+id/viewEventBg"
+            android:layout_toStartOf="@+id/viewEventBg"
+            android:padding="5dp"
+            android:src="@drawable/gallery_icon_128" />
+
+        <View
+            android:id="@+id/viewAlertColor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewAlertBg"
+            android:layout_toLeftOf="@+id/viewAttendanceBg"
+            android:layout_toStartOf="@+id/viewAttendanceBg"
+            android:background="@drawable/dash_title_blue" />
+
+
+        <TextView
+            android:id="@+id/textViewAlertTitle"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/viewAlertColor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewAlertBg"
+            android:layout_toLeftOf="@+id/viewAttendanceBg"
+            android:layout_toStartOf="@+id/viewAttendanceBg"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="Alerts"
+            android:textColor="#ffffff" />
+
+
+        <View
+            android:id="@+id/viewAttendanceColor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/viewAttendanceBg"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/viewAttendanceBg"
+            android:layout_alignTop="@+id/viewAlertBg"
+            android:background="@drawable/dash_title_blue" />
+
+        <TextView
+            android:id="@+id/textViewAttendanceTitle"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/textViewAlertTitle"
+            android:layout_alignLeft="@+id/viewAttendanceBg"
+            android:layout_alignStart="@+id/viewAttendanceBg"
+            android:layout_alignTop="@+id/viewAttendanceBg"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="Fees"
+            android:textColor="#ffffff" />
+
+
+        <View
+            android:id="@+id/viewParentZonesColor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewParentZoneBg"
+            android:background="@drawable/dash_title_blue" />
+
+        <TextView
+            android:id="@+id/textViewParentZoneTitle"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/viewParentZonesColor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewParentZoneBg"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="Parent Zone"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/notificationTextFirst"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewNotificationColor"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notificationTextSecond"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/notificationTextFirst"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notificationTextThird"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/notificationTextSecond"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/eventTextFirst"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/viewEventBg"
+            android:layout_alignStart="@+id/viewEventBg"
+            android:layout_below="@+id/viewEventColor"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/eventTextSecond"
+            android:textSize="20sp"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_alignLeft="@+id/viewEventBg"
+            android:layout_alignStart="@+id/viewEventBg"
+            android:layout_below="@+id/eventTextFirst"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/eventTextThird"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/viewEventBg"
+            android:layout_alignStart="@+id/viewEventBg"
+            android:layout_below="@+id/eventTextSecond"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/alertTextFirst"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewAlertColor"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/viewAttendanceBg"
+            android:layout_toStartOf="@+id/viewAttendanceBg"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/alertTextSecond"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/alertTextFirst"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/viewAttendanceBg"
+            android:layout_toStartOf="@+id/viewAttendanceBg"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/alertTextThird"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/alertTextSecond"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/viewAttendanceBg"
+            android:layout_toStartOf="@+id/viewAttendanceBg"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/feesTextFirst"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/alertTextFirst"
+            android:layout_alignBottom="@+id/alertTextFirst"
+            android:layout_alignLeft="@+id/viewAttendanceBg"
+            android:layout_alignStart="@+id/viewAttendanceBg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/feesTextSecond"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/alertTextSecond"
+            android:layout_alignBottom="@+id/alertTextSecond"
+            android:layout_alignLeft="@+id/viewAttendanceBg"
+            android:layout_alignStart="@+id/viewAttendanceBg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/feesTextThird"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBaseline="@+id/alertTextThird"
+            android:layout_alignBottom="@+id/alertTextThird"
+            android:layout_alignLeft="@+id/viewAttendanceBg"
+            android:layout_alignStart="@+id/viewAttendanceBg"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold" />
+
+
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            android:id="@+id/attendance_progress"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            custom:arc_bottom_text_size="25sp"
+            custom:arc_finished_color="#2677AC"
+            custom:arc_max="100"
+            custom:arc_progress="0"
+            custom:arc_stroke_width="10dp"
+            custom:arc_suffix_text="%"
+            custom:arc_suffix_text_padding="-3dp"
+            custom:arc_text_color="#2677AC"
+            custom:arc_text_size="22sp"
+            custom:arc_unfinished_color="#6effffff"
+            android:layout_below="@+id/viewParentZonesColor"
+            android:layout_alignLeft="@+id/attendanceTv"
+            android:layout_alignStart="@+id/attendanceTv" />
+
+        <TextView
+            android:id="@+id/attendanceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Attendance"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/noDataNotificationDashboardTextView"
+            android:layout_toStartOf="@+id/noDataNotificationDashboardTextView"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp" />
+
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/viewParentZoneBg"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/viewParentZonesColor"
+            android:src="@drawable/dash_guage" />
+
+
+        <TextView
+            android:id="@+id/noDataNotificationDashboardTextView"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/notificationTextSecond"
+            android:layout_centerHorizontal="true"
+            android:text="No Notifications"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/noDataCalendarDashboardTextView"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/eventTextSecond"
+            android:layout_alignBottom="@+id/eventTextSecond"
+            android:layout_alignLeft="@+id/viewEventBg"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/viewEventBg"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/noDataAvailable"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/noDataAlertDashboardTextView"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/alertTextSecond"
+            android:layout_toLeftOf="@+id/viewAttendanceBg"
+            android:layout_toStartOf="@+id/viewAttendanceBg"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/noDataAvailable"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/noDataFeesDashboardTextView"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/feesTextSecond"
+            android:layout_alignBottom="@+id/feesTextSecond"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/noDataAvailable"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/viewForNoticeClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/viewEventBg"
+            android:layout_alignParentTop="true" />
+
+        <View
+            android:id="@+id/viewForEventsClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/viewAlertBg"
+            android:layout_alignLeft="@+id/viewEventBg"
+            android:layout_alignStart="@+id/viewEventBg"
+            android:layout_alignTop="@+id/viewEventBg" />
+
+        <View
+            android:id="@+id/viewForRewardsClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/viewGalleryBg"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewRewardBg"
+            android:layout_toLeftOf="@+id/viewEventBg"
+            android:layout_toStartOf="@+id/viewEventBg" />
+
+        <View
+            android:id="@+id/viewForGalleryClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/viewGalleryBg"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/textViewGalleryTitle"
+            android:layout_toLeftOf="@+id/viewEventBg"
+            android:layout_toStartOf="@+id/viewEventBg" />
+
+        <View
+            android:id="@+id/viewForAlertClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/viewParentZoneBg"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/viewAlertBg"
+            android:layout_toLeftOf="@+id/viewAttendanceBg"
+            android:layout_toStartOf="@+id/viewAttendanceBg" />
+
+        <View
+            android:id="@+id/viewForFeesClick"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/viewParentZoneBg"
+            android:layout_alignLeft="@+id/viewAttendanceBg"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/viewAttendanceBg"
+            android:layout_alignTop="@+id/viewAttendanceBg" />
+
+
+        <View
+            android:id="@+id/viewForAttendanceClick"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewParentZonesColor"
+            android:layout_alignBottom="@+id/viewParentZoneBg"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <View
+            android:id="@+id/viewForReportsClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/viewParentZoneBg"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/viewForAttendanceClick"
+            android:layout_toEndOf="@+id/viewForAttendanceClick"
+            android:layout_alignLeft="@+id/imageButton"
+            android:layout_alignStart="@+id/imageButton"
+            android:layout_toRightOf="@+id/viewForAttendanceClick" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/viewForParentZoneClick"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/viewParentZoneBg"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignTop="@+id/viewParentZoneBg" />-->
+
+
+    </RelativeLayout>
+
+</ScrollView>

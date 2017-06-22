@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/yearlyattendancetextView"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/monthCountIndividualStudentReview"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Yearly attendance  2017"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/monthCountIndividualStudentReview"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/individualStudentReviewMonthselectorSpiner"
+        android:layout_toStartOf="@+id/individualStudentReviewMonthselectorSpiner"
+        android:gravity="center"
+        android:text="0 %"
+        android:textColor="@color/colorPrimary"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_alignBottom="@+id/monthCountIndividualStudentReview"
+        android:layout_alignEnd="@+id/monthCountIndividualStudentReview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/monthCountIndividualStudentReview"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="Monthly Attendance"
+        android:textColor="#000" />
+
+    <Spinner
+        android:id="@+id/individualStudentReviewMonthselectorSpiner"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:background="@drawable/user_profile_fields_bg"
+        android:layout_above="@+id/textView30"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.github.mikephil.charting.charts.CombinedChart
+        android:id="@+id/individualStudentAttendanceCombinedChart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/yearlyattendancetextView"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/individualStudentReviewMonthselectorSpiner"
+        android:layout_alignEnd="@+id/individualStudentReviewMonthselectorSpiner"
+        android:layout_alignRight="@+id/individualStudentReviewMonthselectorSpiner"
+        android:layout_alignTop="@+id/individualStudentReviewMonthselectorSpiner"
+        android:src="@drawable/picklist50" />
+
+</RelativeLayout>

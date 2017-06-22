@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/textNotifications"
+        android:layout_alignTop="@+id/textNotifications"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="2dp"
+        android:src="@drawable/setting_notification50" />
+
+    <TextView
+        android:id="@+id/textNotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/imageView8"
+        android:layout_toRightOf="@+id/imageView8"
+        android:gravity="center_vertical|start"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:text="Notifications"
+        android:textSize="22sp" />
+
+    <Switch
+        android:id="@+id/notificationSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textNotifications"
+        android:layout_alignEnd="@+id/view14"
+        android:layout_alignRight="@+id/view14"
+        android:layout_alignTop="@+id/textNotifications" />
+
+    <View
+        android:id="@+id/view14"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textNotifications"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="#ccccca" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/view28"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textfeedback"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="2dp"
+        android:src="@drawable/feedback50" />
+
+    <TextView
+        android:id="@+id/textfeedback"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/view14"
+        android:layout_toEndOf="@+id/imageView9"
+        android:layout_toRightOf="@+id/imageView9"
+        android:gravity="center_vertical|start"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:text="Feedback"
+        android:textSize="22sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="70dp" />
+
+    <View
+        android:id="@+id/view28"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textfeedback"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="#ccccca" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/view29"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view28"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="2dp"
+        android:src="@drawable/settingshelp50" />
+
+    <TextView
+        android:id="@+id/textViewRemind"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/view28"
+        android:layout_toEndOf="@+id/imageView11"
+        android:layout_toRightOf="@+id/imageView11"
+        android:gravity="center_vertical|start"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:text="Assignment Reminder"
+        android:textSize="22sp" />
+
+    <View
+        android:id="@+id/view29"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewRemind"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="#ccccca" />
+
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/view30"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view29"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="2dp"
+        android:src="@drawable/setting_bug50" />
+
+    <TextView
+        android:id="@+id/textReportbugs"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/view29"
+        android:layout_toEndOf="@+id/imageView12"
+        android:layout_toRightOf="@+id/imageView12"
+        android:gravity="center_vertical|start"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:text="Report Bugs"
+        android:textSize="22sp" />
+
+    <View
+        android:id="@+id/view30"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textReportbugs"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="#ccccca" />
+
+
+    <TextView
+        android:id="@+id/aboutTextView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/view30"
+        android:layout_toEndOf="@+id/imageView12"
+        android:layout_toRightOf="@+id/imageView12"
+        android:gravity="center_vertical|start"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:text="About Us"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/aboutTextView"
+        android:layout_alignLeft="@+id/view30"
+        android:layout_alignStart="@+id/view30"
+        android:layout_below="@+id/imageView12"
+        android:padding="2dp"
+        android:src="@drawable/about50" />
+
+    <View
+        android:id="@+id/view31"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/aboutTextView"
+        android:layout_alignEnd="@+id/view30"
+        android:layout_alignLeft="@+id/imageView15"
+        android:layout_alignRight="@+id/view30"
+        android:layout_alignStart="@+id/imageView15"
+        android:background="#ccccca" />
+
+    <TextView
+        android:id="@+id/textViewAssignmentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view28"
+        android:text="06:00 PM"
+        android:textSize="22sp"
+        android:gravity="center_vertical|start"
+        android:padding="10dp"
+        android:layout_above="@+id/view29"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

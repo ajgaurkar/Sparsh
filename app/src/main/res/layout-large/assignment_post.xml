@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <View
+        android:id="@+id/view20"
+        android:layout_width="15dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000" />
+
+    <Spinner
+        android:id="@+id/spinnerAssignmentClass"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/spinnerAssignmentSubject"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/spinnerAssignmentSubject"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/view20"
+        android:background="@drawable/user_profile_fields_bg" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinnerAssignmentClass"
+        android:layout_toLeftOf="@+id/view20"
+        android:layout_toStartOf="@+id/view20"
+        android:src="@drawable/picklist50" />
+
+    <Spinner
+        android:id="@+id/spinnerAssignmentDivision"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/spinnerAssignmentDueDate"
+        android:layout_alignRight="@+id/spinnerAssignmentDueDate"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/view20"
+        android:background="@drawable/user_profile_fields_bg" />
+
+
+    <Spinner
+        android:id="@+id/spinnerAssignmentSubject"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/spinnerAssignmentScoreType"
+        android:layout_alignStart="@+id/spinnerAssignmentScoreType"
+        android:layout_below="@+id/spinnerAssignmentClass"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/view20"
+        android:background="@drawable/user_profile_fields_bg" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinnerAssignmentSubject"
+        android:layout_toLeftOf="@+id/view20"
+        android:layout_toStartOf="@+id/view20"
+        android:src="@drawable/picklist50" />
+
+
+    <TextView
+        android:id="@+id/spinnerAssignmentDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/spinnerAssignmentScoreType"
+        android:layout_alignRight="@+id/spinnerAssignmentScoreType"
+        android:layout_alignTop="@+id/spinnerAssignmentSubject"
+        android:layout_toRightOf="@+id/view20"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="center"
+        android:text="[ Due date ]"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+
+    <Spinner
+        android:id="@+id/spinnerAssignmentScoreType"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinnerAssignmentDueDate"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/user_profile_fields_bg" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spinnerAssignmentScoreType"
+        android:layout_alignRight="@+id/spinnerAssignmentScoreType"
+        android:layout_alignTop="@+id/spinnerAssignmentScoreType"
+        android:src="@drawable/picklist50" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinnerAssignmentScoreType"
+        android:layout_alignEnd="@+id/spinnerAssignmentDueDate"
+        android:layout_alignRight="@+id/spinnerAssignmentDueDate"
+        android:src="@drawable/picklist50" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinnerAssignmentDivision"
+        android:layout_alignEnd="@+id/spinnerAssignmentDivision"
+        android:layout_alignRight="@+id/spinnerAssignmentDivision"
+        android:src="@drawable/picklist50" />
+
+
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/creditsSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerAssignmentScoreType"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        app:dsb_max="100"
+        app:dsb_min="1" />
+
+    <View
+        android:id="@+id/view74"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:id="@+id/view47"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="42dp" />
+
+
+    <TextView
+        android:id="@+id/creditsCountTextView"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/creditsSeekBar"
+        android:layout_alignLeft="@+id/spinnerAssignmentScoreType"
+        android:layout_alignStart="@+id/spinnerAssignmentScoreType"
+        android:layout_alignTop="@+id/spinnerAssignmentScoreType"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/assmnt_credit_count_circle_bg"
+        android:gravity="center"
+        android:text="00"
+        android:textColor="#149883"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/creditsSeekBar"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <EditText
+            android:id="@+id/assignmentTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/user_profile_fields_bg"
+            android:gravity="start"
+            android:hint="Add Description here"
+            android:padding="5dp" />
+
+        <ListView
+            android:id="@+id/listViewAttachment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginStart="15dp"
+            android:padding="5dp"
+            android:background="@drawable/list_no_bg"
+            android:layout_marginLeft="15dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

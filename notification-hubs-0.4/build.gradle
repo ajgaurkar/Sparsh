@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('notification-hubs-0.4.jar'))

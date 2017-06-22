@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/assignmentDetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="14dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/assignment_detail_top_panel_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="2dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/view71"
+                        android:layout_width="1dp"
+                        android:layout_height="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true" />
+
+                    <View
+                        android:id="@+id/view72"
+                        android:layout_width="10dp"
+                        android:layout_height="1dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toLeftOf="@+id/view71"
+                        android:layout_toStartOf="@+id/view71"
+                        android:padding="5dp"
+                        android:text="Post On"
+                        android:textColor="#616060"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/postedOnTextView"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textView3"
+                        android:layout_toRightOf="@+id/textView3"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:text="05/07/2015  12:00 PM"
+                        android:textColor="#616060"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView3"
+                        android:layout_alignStart="@+id/textView3"
+                        android:layout_below="@+id/textView3"
+                        android:layout_toLeftOf="@+id/view71"
+                        android:padding="5dp"
+                        android:text="Due date"
+                        android:textColor="#616060"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dueDateTextView"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/postedOnTextView"
+                        android:layout_toRightOf="@+id/textView2"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:text="05/07/2015  12:00 PM "
+                        android:textColor="#ff0a00"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/submittedByText"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView2"
+                        android:layout_alignStart="@+id/textView2"
+                        android:layout_below="@+id/textView2"
+                        android:layout_toLeftOf="@+id/view71"
+                        android:layout_toStartOf="@+id/view71"
+                        android:padding="5dp"
+                        android:text="Submitted by"
+                        android:textColor="#616060"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/submittedByTextView"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/textView2"
+                        android:layout_toEndOf="@+id/submittedByText"
+                        android:layout_toRightOf="@+id/submittedByText"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:text="Mr.Manoj Kumar"
+                        android:textColor="#616060"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/assignment_detail_description_panel_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/assignment_detail_top_panel_cv"
+                android:layout_alignStart="@+id/assignment_detail_top_panel_cv"
+                android:layout_below="@+id/assignment_detail_top_panel_cv"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/alert_detail_description_panel_cv"
+                    android:layout_alignLeft="@+id/alert_detail_description_panel_cv"
+                    android:layout_alignStart="@+id/alert_detail_description_panel_cv"
+                    android:layout_alignTop="@+id/alert_detail_description_panel_cv">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="3"
+                        android:padding="5dp"
+                        android:text="Description"
+                        android:textColor="#616060"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/descriptionTextView"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView9"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:autoLink="all"
+                        android:minLines="2"
+                        android:padding="5dp"
+                        android:scrollHorizontally="true"
+                        android:scrollbars="vertical"
+                        android:text="In mathematics, an equation is a statement of an equality containing one or more variables. Solving the equation consists of determining which values of the variables make the equality true
+                In mathematics, an equation is a statement of an equality containing one or more variables. Solving the equation consists of determining which values of the variables make the equality true
+                In mathematics, an equation is a statement of an equality containing one or more variables. Solving the equation consists of determining which values of the variables make the equality true" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/assignment_detail_comment_panel_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/assignment_detail_description_panel_cv"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/alert_detail_description_panel_cv"
+                    android:layout_alignLeft="@+id/alert_detail_description_panel_cv"
+                    android:layout_alignStart="@+id/alert_detail_description_panel_cv"
+                    android:layout_alignTop="@+id/alert_detail_description_panel_cv">
+
+                    <TextView
+                        android:id="@+id/commentTextView"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView10"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:maxLines="10"
+                        android:minLines="2"
+                        android:padding="5dp"
+                        android:scrollHorizontally="true"
+                        android:scrollbars="vertical"
+                        android:text="Spend more time onmathematics equations
+                 In mathematics, an equation is a statement of an equality containing one or more variables. Solving the equation consists of determining which values of the variables make the equality true
+                 In mathematics, an equation is a statement of an equality containing one or more variables. Solving the equation consists of determining which values of the variables make the equality true
+                 In mathematics, an equation is a statement of an equality containing one or more variables. Solving the equation consists of determining which values of the variables make the equality true" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/commentTextView"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/commentTextView"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="3"
+                        android:padding="5dp"
+                        android:text="Comments / Remarks "
+                        android:textColor="#616060"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/assignment_detail_attachment_panel_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/assignment_detail_description_panel_cv"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/assignment_detail_description_panel_cv"
+                android:layout_below="@+id/assignment_detail_comment_panel_cv"
+                android:layout_marginEnd="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/alert_detail_attachment_panel_cv"
+                    android:layout_alignLeft="@+id/alert_detail_attachment_panel_cv"
+                    android:layout_alignStart="@+id/alert_detail_attachment_panel_cv"
+                    android:layout_alignTop="@+id/alert_detail_attachment_panel_cv">
+
+                    <View
+                        android:id="@+id/view70"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/downloadingTtextView"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="Attachments"
+                        android:textColor="#616060"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:id="@+id/downloadAttachmentButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/downloadingTtextView"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:padding="1dp"
+                        android:src="@drawable/download64b" />
+
+                    <ProgressBar
+                        android:id="@+id/attachDownloadProgressBar"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/downloadAttachmentButton"
+                        android:layout_alignLeft="@+id/downloadAttachmentButton"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/downloadAttachmentButton"
+                        android:padding="2dp" />
+
+                    <View
+                        android:id="@+id/view73"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/downloadingTtextView"
+                        android:background="#d6d6d6" />
+
+                    <ListView
+                        android:id="@+id/attachmentListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/view73"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/assApproveButton"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_below="@+id/downloadAttachmentButton"-->
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/assignmentApproveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:src="@drawable/approve_file_96" />s
+</RelativeLayout>

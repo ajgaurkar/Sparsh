@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <View
+        android:id="@+id/view41"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/view37"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:id="@+id/view50"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/leavefrom"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/leavefrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/leavesApproveLeavesFromTextView"
+        android:layout_alignEnd="@+id/leavesApproveLeavesFromTextView"
+        android:layout_alignLeft="@+id/leavesApproveLeavesFromTextView"
+        android:layout_alignRight="@+id/leavesApproveLeavesFromTextView"
+        android:layout_alignStart="@+id/leavesApproveLeavesFromTextView"
+        android:layout_alignTop="@+id/leaveto"
+
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:text="Leave From" />
+
+    <TextView
+        android:id="@+id/leaveto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/leavesApproveLeavesToTextView"
+        android:layout_alignLeft="@+id/leavesApproveLeavesToTextView"
+        android:layout_alignRight="@+id/leavesApproveLeavesToTextView"
+        android:layout_alignStart="@+id/leavesApproveLeavesToTextView"
+        android:layout_below="@+id/leaveApproveStudentNameTextView"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:text="Leave To" />
+
+    <TextView
+        android:id="@+id/leavesApproveLeavesFromTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leaveto"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_toLeftOf="@+id/view41"
+        android:layout_toStartOf="@+id/view41"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/leavesApproveLeavesToTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leaveto"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/view41"
+        android:layout_toRightOf="@+id/view41"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/leavesApproveCauseEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view37"
+        android:layout_alignEnd="@+id/leavesApproveLeavesToTextView"
+        android:layout_alignLeft="@+id/leavesApproveLeavesFromTextView"
+        android:layout_alignRight="@+id/leavesApproveLeavesToTextView"
+        android:layout_alignStart="@+id/leavesApproveLeavesFromTextView"
+        android:layout_below="@+id/leaveApproveLeavesCount"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="start"
+        android:padding="5dp"
+        android:scrollHorizontally="true"
+        android:text="Cause " />
+
+    <Button
+        android:id="@+id/leavesDenyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/leaveApproveLeavesCount"
+        android:layout_alignLeft="@+id/leavesApproveCauseEditText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/leaveApproveLeavesCount"
+        android:layout_alignStart="@+id/leavesApproveCauseEditText"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
+        android:background="#de564e"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Deny"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/leaveApproveLeavesCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/leavesApproveLeavesFromTextView"
+        android:layout_alignLeft="@+id/textView67"
+        android:layout_alignRight="@+id/leavesApproveLeavesFromTextView"
+        android:layout_alignStart="@+id/textView67"
+        android:layout_below="@+id/textView67"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="center"
+        android:maxLength="2"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/leavesApproveLeavesFromTextView"
+        android:layout_alignStart="@+id/leavesApproveLeavesFromTextView"
+        android:layout_below="@+id/leavesApproveLeavesFromTextView"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:text=" No. of Day(s)" />
+
+    <TextView
+        android:id="@+id/leaveApproveStudentNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/backpressimageView"
+        android:layout_toRightOf="@+id/backpressimageView"
+        android:padding="5dp"
+        android:text="Kapil Mohitkar"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/leaveApproveRollNoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view50"
+        android:layout_alignEnd="@+id/leaveto"
+        android:layout_alignRight="@+id/leaveto"
+        android:layout_alignTop="@+id/leaveApproveStudentNameTextView"
+        android:gravity="center_vertical|end"
+        android:paddingEnd="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingStart="3dp"
+        android:text="Roll 32"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/leaveReplyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/leavesDenyButton"
+        android:layout_alignEnd="@+id/leavesApproveCauseEditText"
+        android:layout_alignLeft="@+id/leavesApproveCauseEditText"
+        android:layout_alignRight="@+id/leavesApproveCauseEditText"
+        android:layout_alignStart="@+id/leavesApproveCauseEditText"
+        android:layout_below="@+id/view37"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/leaveto"
+        android:layout_toStartOf="@+id/leaveto"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="start"
+        android:hint=""
+        android:paddingBottom="5dp"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="25dp" />
+
+    <Button
+        android:id="@+id/leaveApproveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/leavesDenyButton"
+        android:layout_alignEnd="@+id/leaveApproveRollNoTextView"
+        android:layout_alignLeft="@+id/leavesApproveLeavesToTextView"
+        android:layout_alignRight="@+id/leaveApproveRollNoTextView"
+        android:layout_alignStart="@+id/leavesApproveLeavesToTextView"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Approve"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/leaveStatusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/leavesDenyButton"
+        android:layout_alignEnd="@+id/leaveApproveBtn"
+        android:layout_alignLeft="@+id/leavefrom"
+        android:layout_alignRight="@+id/leaveApproveBtn"
+        android:layout_alignStart="@+id/leavefrom"
+        android:layout_alignTop="@+id/leavesDenyButton"
+        android:gravity="center"
+        android:text="Approved"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/leaveReplyTextViewHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/leaveApproveBtn"
+        android:layout_alignLeft="@+id/leaveReplyEditText"
+        android:layout_alignRight="@+id/leaveApproveBtn"
+        android:layout_alignStart="@+id/leaveReplyEditText"
+        android:layout_alignTop="@+id/leaveReplyEditText"
+        android:background="@drawable/title_bg_grey"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Reply"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/backpressimageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/leaveto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/leaveApproveStudentNameTextView"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/arrow100" />
+
+</RelativeLayout>

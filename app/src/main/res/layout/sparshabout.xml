@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screem_panel_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/relecotech_logo" />
+
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/company_logo"
+        android:layout_marginTop="2dp"
+        android:padding="2dp"
+        android:text="RELECOTECH SOFTWARE SOLUTIONS PVT LTD."
+        android:textStyle="bold" />
+
+
+
+
+    <TextView
+        android:id="@+id/aboutDesc"
+        style="@android:style/TextAppearance.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/companyName"
+       android:padding="2dp"
+        android:text="@string/company_desc"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/companyName"
+        android:layout_alignStart="@+id/companyName"
+        android:layout_alignRight="@+id/companyName"
+        android:layout_alignEnd="@+id/companyName" />
+
+    <TextView
+        android:id="@+id/aboutDesc2"
+        style="@android:style/TextAppearance.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutDesc"
+        android:padding="2dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/company_desc2"
+        android:textStyle="bold"
+        android:autoLink="all"
+        android:layout_alignLeft="@+id/aboutDesc"
+        android:layout_alignStart="@+id/aboutDesc"
+        android:layout_alignRight="@+id/aboutDesc"
+        android:layout_alignEnd="@+id/aboutDesc" />
+
+
+</RelativeLayout>

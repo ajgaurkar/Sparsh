@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical">
+
+
+    <View
+        android:id="@+id/timelineStickView"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:background="@color/colorPrimary" />
+
+
+    <ListView
+        android:id="@+id/alertlistview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:paddingRight="10dp"
+        android:scrollbars="none" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addAlertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/add48png" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/noDataAvailableTextView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/addAlertButton"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="178dp"-->
+        <!--android:text="No Data Available"-->
+        <!--android:textSize="18sp" />-->
+
+    <TextView
+        android:id="@+id/noDataAvailableTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:text="No data available"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold|italic"/>
+
+
+</RelativeLayout>

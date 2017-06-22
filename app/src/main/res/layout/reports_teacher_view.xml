@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reports_xml_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/teacher_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view55"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <View
+            android:id="@+id/view33"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Spinner
+            android:id="@+id/teacher_reports_class_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/view33"
+            android:layout_toStartOf="@+id/view33"
+            android:background="@drawable/user_profile_fields_bg"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp" />
+
+        <Spinner
+            android:id="@+id/teacher_reports_division_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/teacher_reports_class_spinner"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/view33"
+            android:layout_toRightOf="@+id/view33"
+            android:background="@drawable/user_profile_fields_bg"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp" />
+
+        <RadioGroup
+            android:id="@+id/teacherreportsRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/teacher_reports_division_spinner"
+            android:layout_alignLeft="@+id/teacher_reports_class_spinner"
+            android:layout_alignRight="@+id/teacher_reports_division_spinner"
+            android:layout_alignStart="@+id/teacher_reports_class_spinner"
+            android:layout_below="@+id/teacher_reports_class_spinner"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/studentRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:paddingEnd="10dp"
+                android:text="Student" />
+
+            <RadioButton
+                android:id="@+id/subjectRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:checked="false"
+                android:paddingEnd="5dp"
+                android:text="Subject" />
+
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/teacher_reports_exam_selector_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignEnd="@+id/teacher_reports_class_spinner"
+            android:layout_alignLeft="@+id/teacherreportsRadioGroup"
+            android:layout_alignRight="@+id/teacher_reports_class_spinner"
+            android:layout_alignStart="@+id/teacherreportsRadioGroup"
+            android:layout_below="@+id/teacherreportsRadioGroup"
+            android:layout_marginTop="20dp"
+            android:layout_toStartOf="@+id/view33"
+            android:background="@drawable/user_profile_fields_bg" />
+
+        <Spinner
+            android:id="@+id/teacher_reports_subject_selector_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignEnd="@+id/teacher_reports_division_spinner"
+            android:layout_alignLeft="@+id/teacher_reports_division_spinner"
+            android:layout_alignRight="@+id/teacher_reports_division_spinner"
+            android:layout_alignStart="@+id/teacher_reports_division_spinner"
+            android:layout_alignTop="@+id/teacher_reports_student_selector_spinner"
+            android:background="@drawable/user_profile_fields_bg" />
+
+        <Spinner
+            android:id="@+id/teacher_reports_student_selector_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignEnd="@+id/teacherreportsRadioGroup"
+            android:layout_alignLeft="@+id/teacherreportsRadioGroup"
+            android:layout_alignRight="@+id/teacherreportsRadioGroup"
+            android:layout_alignStart="@+id/teacherreportsRadioGroup"
+            android:layout_below="@+id/teacherreportsRadioGroup"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/user_profile_fields_bg" />
+
+        <ImageView
+            android:id="@+id/student_arrow_down_float"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/teacher_reports_subject_selector_spinner"
+            android:layout_alignEnd="@+id/teacher_reports_subject_selector_spinner"
+            android:layout_alignRight="@+id/teacher_reports_subject_selector_spinner"
+            android:layout_alignTop="@+id/teacher_reports_subject_selector_spinner"
+            android:paddingEnd="5dp"
+            android:src="@drawable/picklist50" />
+
+        <Button
+            android:id="@+id/teacher_reports_view_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/teacher_reports_student_selector_spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="View"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/exam_arrow_down_float"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/teacher_reports_exam_selector_spinner"
+            android:layout_alignEnd="@+id/teacher_reports_exam_selector_spinner"
+            android:layout_alignRight="@+id/teacher_reports_exam_selector_spinner"
+            android:layout_alignTop="@+id/teacher_reports_exam_selector_spinner"
+            android:paddingEnd="5dp"
+            android:src="@drawable/picklist50" />
+
+        <ImageView
+            android:id="@+id/div_arrow_down_float"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/teacherreportsRadioGroup"
+            android:layout_alignEnd="@+id/student_arrow_down_float"
+            android:layout_alignRight="@+id/student_arrow_down_float"
+            android:layout_alignTop="@+id/teacher_reports_division_spinner"
+            android:paddingEnd="5dp"
+            android:src="@drawable/picklist50" />
+
+        <ImageView
+            android:id="@+id/class_arrow_down_float"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/teacherreportsRadioGroup"
+            android:layout_alignEnd="@+id/teacher_reports_class_spinner"
+            android:layout_alignRight="@+id/teacher_reports_class_spinner"
+            android:layout_alignTop="@+id/teacher_reports_class_spinner"
+            android:paddingEnd="5dp"
+            android:src="@drawable/picklist50" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

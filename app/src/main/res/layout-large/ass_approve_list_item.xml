@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:weightSum="30">
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/textView36"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="5"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:paddingStart="5dp"-->
+            <!--android:text="Roll No."-->
+            <!--android:textSize="20sp" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="15"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:paddingStart="5dp"-->
+            <!--android:text="Student Name"-->
+            <!--android:textSize="20sp" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="10"-->
+            <!--android:gravity="center_vertical|end"-->
+            <!--android:paddingEnd="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:text="Status"-->
+            <!--android:textSize="20sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <TextView
+        android:id="@+id/approvalRollNoTextView"
+        android:layout_width="0dp"
+        android:layout_weight="6"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/approvalNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="22"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:text="Ajinkya Gaurkar"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/approvalStatusTextView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_weight="0"
+        android:background="@drawable/yellow_circle_bg"
+        android:gravity="center"
+        android:text="P"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

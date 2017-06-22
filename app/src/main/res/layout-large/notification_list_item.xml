@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/assignment_date_bg"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="6dp"
+        android:paddingTop="3dp"
+        android:text="28 june"
+        android:textColor="#f6273a4e"
+        android:textStyle="bold|italic"
+        android:layout_alignParentLeft="true" />
+
+    <View
+        android:id="@+id/itemBody"
+        android:layout_width="270dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/txt_Date"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/txt_Date"
+        android:layout_below="@+id/txt_Date"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/notification_item_body_bg"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#222222"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/notifaction_tag_imageView"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/itemBody"
+        android:layout_alignLeft="@+id/itemBody"
+        android:layout_alignStart="@+id/itemBody"
+        android:layout_alignTop="@+id/itemBody"
+        android:layout_margin="15dp"
+        android:background="@drawable/notification_icon_bg"
+        android:padding="10dp"
+        android:src="@drawable/leave_notification_96" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/itemBody"
+        android:layout_alignEnd="@+id/itemBody"
+        android:layout_alignRight="@+id/itemBody"
+        android:layout_alignTop="@+id/itemBody"
+        android:layout_toEndOf="@+id/notifaction_tag_imageView"
+        android:layout_toRightOf="@+id/notifaction_tag_imageView"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/txt_Body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:text="Alert for Attendance"
+            android:textColor="#565656"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_Title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:text="Leave Added by Kapil Mohitkar"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/txt_Submited_By_or_to"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:text="Submitted by : "
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+
+</RelativeLayout>

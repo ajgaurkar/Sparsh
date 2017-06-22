@@ -1,0 +1,1 @@
+include ':app', ':commons-lang3-3.4', ':notification-hubs-0.4', ':azure-notifications-handler-1.0.1', ':gcm'

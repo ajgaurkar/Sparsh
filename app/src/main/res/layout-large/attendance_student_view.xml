@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/studentmonthlyattendacetextview"
+        android:layout_marginTop="28dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Yearly attendance  2016"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/studentmonthlyattendacetextview"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="88 %"
+        android:textColor="@color/colorPrimary"
+        android:textSize="65dp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/studentmonthlyattendacetextview"
+        android:layout_alignEnd="@+id/studentmonthlyattendacetextview"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:gravity="center"
+        android:text="Monthly Attendance"
+        android:textColor="#000" />
+
+    <Spinner
+        android:id="@+id/monthselectorSpiner"
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/textView30"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/edittext_semitransparent_bg" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView31"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="12dp"
+        android:layout_height="250dp"
+        android:layout_alignBottom="@+id/graph"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView31"
+        android:gravity="center"
+        android:paddingStart="3dp"
+        android:text="Percent" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView32"
+        android:gravity="center"
+        android:text="Months" />
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fees_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        app:tabTextAppearance="@android:style/TextAppearance.Medium"
+        app:tabIndicatorColor="@color/white"
+        app:tabMode="fixed"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#ffffff" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/fees_tab_layout"
+        android:background="@drawable/bottom_partition_bg"
+        android:orientation="horizontal"
+        android:weightSum="50">
+
+        <TextView
+            android:id="@+id/time_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="start"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="No."
+            android:textColor="@color/colorHeadingColor" />
+
+        <TextView
+            android:id="@+id/dur_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="11"
+            android:gravity="start"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:text="Duration"
+            android:textColor="@color/colorHeadingColor" />
+
+        <TextView
+            android:id="@+id/dueDate_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_weight="13"
+            android:gravity="start"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text="Due Date"
+            android:textColor="@color/colorHeadingColor" />
+
+        <TextView
+            android:id="@+id/feeAmt_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="12"
+            android:gravity="start"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Amount"
+            android:textColor="@color/colorHeadingColor" />
+
+        <TextView
+            android:id="@+id/feeStatus_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:gravity="start"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Status "
+            android:textColor="@color/colorHeadingColor" />
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fees_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout3" />
+</RelativeLayout>

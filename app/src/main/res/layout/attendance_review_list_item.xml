@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/attendancereviewRollNoTextView"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/view27"
+        android:layout_width="1dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/attendancereviewRollNoTextView"
+        android:layout_alignParentTop="true"
+        android:background="#00787878" />
+
+    <TextView
+        android:id="@+id/attendanceReviewStdNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/view27"
+        android:layout_toStartOf="@+id/attendanceStatusTextView"
+        android:gravity="center_vertical"
+        android:paddingStart="5dp"
+        android:text="Ajinkya Gaurkar"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/attendanceReviewStatusTextView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/grey_empty_attendance_circle_bg"
+        android:gravity="center"
+        android:text="P"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

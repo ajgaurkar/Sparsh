@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "114188057736",
+    "firebase_url": "https://spashdevelopment.firebaseio.com",
+    "project_id": "spashdevelopment",
+    "storage_bucket": "spashdevelopment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114188057736:android:9cf41e7aeae0c4fc",
+        "android_client_info": {
+          "package_name": "com.relecotech.androidsparsh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114188057736-jl8cp1lp6na4i2t2id82ebhifvd9aoa6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZEpCIRqY3mrXcZCp1y74ifi9upWssi0U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view25"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="#00000000" />
+
+    <View
+        android:id="@+id/view64"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000" />
+
+    <View
+        android:id="@+id/ud_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/userDetail_listView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#b1b1b1" />
+
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/smallDisplayPic"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_above="@+id/userDetailDisplayName"-->
+    <!--android:layout_alignEnd="@+id/userDetailDisplayPic"-->
+    <!--android:layout_alignRight="@+id/userDetailDisplayPic"-->
+    <!--android:src="@drawable/help64"-->
+    <!--app:civ_border_color="#ed140c"-->
+    <!--app:civ_border_width="15dp" />-->
+
+    <!--<com.github.siyamed.shapeimageview.CircularImageView-->
+    <!--android:id="@+id/editUserDetailDisplayPic"-->
+    <!--androidrc="@drawable/rewards_user_100"-->
+    <!--appiBorderWidth="0dp"-->
+    <!--android:layout_width="90dp"-->
+    <!--android:layout_height="90dp"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="40dp"-->
+    <!--android:padding="2dp"-->
+    <!--android:src="@drawable/app_boy"-->
+    <!--app:civ_border_color="#b8282a"-->
+    <!--app:civ_border_width="150dp" />-->
+
+    <TextView
+        android:id="@+id/userDetailDisplayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userDetailDisplayPic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:text="Ajinkya Anant Gaurkar"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/userDetail_listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/userDetailDisplayName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="#00ffffff"
+        android:dividerHeight="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:scrollbars="none" />
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/edit_profile_pic"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@+id/userDetailDisplayName"-->
+    <!--android:layout_alignEnd="@+id/userDetailDisplayPic"-->
+    <!--android:layout_alignRight="@+id/userDetailDisplayPic"-->
+    <!--android:background="@drawable/edit_icon_bg"-->
+    <!--android:src="@android:drawable/ic_menu_camera"-->
+    <!--app:civ_border_color="#666666"-->
+    <!--app:civ_border_width="1dp" />-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userDetailDisplayPic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/user_profile_white_96"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="5dp" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/userDetailDisplayName"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/view64"
+        android:layout_toRightOf="@+id/view64"
+        android:background="@drawable/edit_profile_camera_bg"
+        android:padding="10dp"
+        android:src="@drawable/camera32" />
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView13"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignBottom="@+id/smallDisplayPic"-->
+    <!--android:layout_alignEnd="@+id/userDetailDisplayPic"-->
+    <!--android:layout_alignLeft="@+id/smallDisplayPic"-->
+    <!--android:layout_alignRight="@+id/userDetailDisplayPic"-->
+    <!--android:layout_alignStart="@+id/smallDisplayPic"-->
+    <!--android:layout_alignTop="@+id/smallDisplayPic"-->
+    <!--android:padding="5dp"-->
+    <!--android:src="@drawable/house_64" />-->
+
+</RelativeLayout>
+

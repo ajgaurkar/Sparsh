@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/fragment_dashboard"
+            android:title="Dashboard"
+            android:titleCondensed="" />
+        <item
+            android:id="@+id/nav_assignment"
+            android:icon="@drawable/fragment_assignment"
+            android:title="Assignments" />
+        <item
+            android:id="@+id/nav_attendance"
+            android:icon="@drawable/fragment_attendance"
+            android:title="Attendance" />
+        <item
+            android:id="@+id/nav_alert"
+            android:icon="@drawable/fragment_alerts"
+            android:title="Alerts" />
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/fragment_reports"
+            android:title="Reports" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/fragment_calendar"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_parent_zone"
+            android:icon="@drawable/fragment_parents_zone"
+            android:title="Parent Zone" />
+
+        <!--<item-->
+            <!--android:id="@+id/nav_student_info"-->
+            <!--android:icon="@drawable/fragment_student_info"-->
+            <!--android:title="Student Information" />-->
+        <item
+            android:id="@+id/nav_class_schedule"
+            android:icon="@drawable/month_view_36"
+            android:title="Class Schedule" />
+        <item
+            android:id="@+id/nav_bus_route"
+            android:icon="@drawable/bus_36"
+            android:title="Bus Tracker" />
+        <!--<item-->
+            <!--android:id="@+id/nav_forums"-->
+            <!--android:icon="@drawable/fragment_forum"-->
+            <!--android:title="Forums" />-->
+
+        <item
+            android:id="@+id/nav_fees"
+            android:icon="@drawable/fragment_fees"
+            android:title="Fees" />
+    </group>
+
+    <item android:title="App Settings">
+        <menu>
+
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/fragment_settings"
+                android:title="Settings" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/fragment_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

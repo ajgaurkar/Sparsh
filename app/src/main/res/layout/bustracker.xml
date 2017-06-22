@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:weightSum="1">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/busTracker_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/robotoCalendarView"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="@color/white"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#ffffff" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/busTracker_tab_layout"
+        android:background="@drawable/bottom_partition_bg"
+        android:orientation="horizontal"
+        android:weightSum="20">
+
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/busTracker_tab_layout"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp"
+            android:paddingEnd="8dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="8dp"
+            android:paddingStart="20dp"
+            android:paddingTop="8dp"
+            android:text="Time" />
+
+
+        <TextView
+            android:id="@+id/textViewStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/textTime"
+            android:layout_weight="15"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="Stop" />
+
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/busTracker_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout3" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabBusTracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/map_markerfab" />
+
+    <TextView
+        android:id="@+id/busTrackNoDataAvailable_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:text="No data available"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold|italic"/>
+    <!--android:textColor="#0d3e60"-->
+
+</RelativeLayout>

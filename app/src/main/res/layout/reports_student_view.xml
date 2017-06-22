@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reports_xml_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/student_report_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/select_exam_button"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/reports_textview_color_bg_left"
+            android:gravity="center"
+            android:text="Exam"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp" />
+
+        <Spinner
+            android:id="@+id/reportselect_spinner"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/select_exam_button"
+            android:layout_alignEnd="@+id/reportHeadingTextView3"
+            android:layout_alignRight="@+id/reportHeadingTextView3"
+            android:layout_alignTop="@+id/select_exam_button"
+            android:layout_marginEnd="10dp"
+            android:layout_toRightOf="@+id/view29"
+            android:background="@drawable/user_profile_fields_bg"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:id="@+id/student_arrow_down_float"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/reportselect_spinner"
+            android:layout_alignEnd="@+id/reportselect_spinner"
+            android:layout_alignRight="@+id/reportselect_spinner"
+            android:layout_alignTop="@+id/reportselect_spinner"
+            android:paddingEnd="3dp"
+            android:paddingRight="3dp"
+            android:src="@drawable/picklist50" />
+
+
+        <View
+            android:id="@+id/view27"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/select_exam_button"
+            android:layout_marginTop="10dp"
+            android:background="#84323232"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/reportHeadingTextView1"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view27"
+            android:gravity="center"
+            android:text="Exam "
+            android:textColor="#aa000000"
+            android:layout_alignParentLeft="true" />
+
+        <View
+            android:id="@+id/view28"
+            android:layout_width="1dp"
+            android:layout_height="29dp"
+            android:layout_alignTop="@+id/reportHeadingTextView1"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/reportHeadingTextView1"
+            android:background="#84323232"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@+id/reportHeadingTextView1">
+
+        </View>
+
+        <TextView
+            android:id="@+id/reportHeadingTextView2"
+            android:layout_width="106dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@+id/reportHeadingTextView1"
+            android:layout_toEndOf="@+id/view28"
+            android:layout_toRightOf="@+id/view28"
+            android:gravity="center"
+            android:text="Marks"
+            android:textColor="#aa000000" />
+
+        <View
+            android:id="@+id/view29"
+            android:layout_width="1dp"
+            android:layout_height="29dp"
+            android:layout_alignTop="@+id/reportHeadingTextView2"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/reportHeadingTextView2"
+            android:layout_toRightOf="@+id/reportHeadingTextView2"
+            android:background="#84323232" />
+
+        <TextView
+            android:id="@+id/reportHeadingTextView3"
+            android:layout_width="104dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/reportHeadingTextView2"
+            android:layout_toEndOf="@+id/view29"
+            android:layout_toRightOf="@+id/view29"
+            android:gravity="center"
+            android:text="Grades"
+            android:textColor="#aa000000"
+            android:layout_alignParentRight="true" />
+
+        <View
+            android:id="@+id/view30"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/reportHeadingTextView1"
+            android:background="#84323232"
+            android:layout_alignParentLeft="true" />
+
+        <View
+            android:id="@+id/view31"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentEnd="true"
+            android:background="#84323232"
+            android:layout_alignParentRight="true" />
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView50"-->
+        <!--android:layout_width="110dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Graph" />-->
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="29dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3dp"
+            android:background="#84323232"
+           />
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView51"-->
+        <!--android:layout_width="110dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Total Marks " />-->
+
+        <View
+            android:id="@+id/view59"
+            android:layout_width="1dp"
+            android:layout_height="29dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3dp"
+            android:background="#84323232"
+            />
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView52"-->
+        <!--android:layout_width="110dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Grades" />-->
+
+        <ListView
+            android:id="@+id/showlistView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view30"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/select_subject_button"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/select_exam_button"
+            android:layout_toEndOf="@+id/select_exam_button"
+            android:background="@drawable/reports_textview_color_bg_left_clicked"
+            android:gravity="center"
+            android:text="Subject"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/select_exam_button" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

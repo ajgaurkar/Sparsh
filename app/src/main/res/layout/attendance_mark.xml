@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/attendanceMarkLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <ListView
+        android:id="@+id/markAttendanceListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view26"
+        android:choiceMode="multipleChoice" />
+
+    <View
+        android:id="@+id/view18"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignLeft="@+id/presentCountTextView"
+        android:layout_alignStart="@+id/presentCountTextView"
+        android:layout_alignTop="@+id/presentCountTextView"
+        android:background="@drawable/attendance_count_bg" />
+
+    <View
+        android:id="@+id/view16"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary" />
+
+    <CheckBox
+        android:id="@+id/markAllCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/attendance_mark_panel_buttons"
+        android:checked="false"
+        android:text="Mark all"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:theme="@style/MarkAttendanceCheckBox"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/textView34"
+        android:layout_below="@+id/markAttendanceListView"
+        android:layout_toRightOf="@+id/textView34" />
+
+    <!--<Button-->
+    <!--android:id="@+id/draftButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/markAttendanceListView"-->
+    <!--android:layout_toLeftOf="@+id/view18"-->
+    <!--android:layout_toRightOf="@+id/textView35"-->
+    <!--android:layout_toStartOf="@+id/view18"-->
+    <!--android:background="@drawable/attendance_mark_panel_buttons"-->
+    <!--android:text="Draft"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textStyle="bold" />-->
+
+
+    <Button
+        android:id="@+id/draftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/markAttendanceListView"
+        android:layout_toEndOf="@+id/view18"
+        android:layout_toRightOf="@+id/view18"
+        android:background="@drawable/attendance_mark_panel_buttons"
+        android:text="Draft"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/presentCountTextView"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:text="00"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view18"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:text="Present"
+        android:textColor="#ffffff" />
+
+    <ProgressBar
+        android:id="@+id/attendanceMarkProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:id="@+id/view26"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view26"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Roll"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/attendanceClassTextView"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view26"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="1st A "
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view26"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Status"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/markAttendanceListView"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView34"
+        android:layout_toRightOf="@+id/textView34"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/noDataAttendanceMarkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:text="No data available"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold|italic"/>
+
+</RelativeLayout>

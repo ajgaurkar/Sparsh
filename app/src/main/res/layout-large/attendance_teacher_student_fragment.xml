@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <View
+        android:id="@+id/view50"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/view51"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true" />
+
+    <Spinner
+        android:id="@+id/attendanceClassspinner"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_toLeftOf="@+id/view50"
+        android:background="@drawable/user_profile_fields_bg" />
+
+    <!--<Spinner-->
+    <!--android:id="@+id/attendanceClassspinner"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="35dp"-->
+    <!--android:layout_marginTop="60dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginStart="20dp"-->
+    <!--android:background="@drawable/user_profile_fields_bg"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toLeftOf="@+id/view50"-->
+    <!--android:layout_toStartOf="@+id/view50" />-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/attendanceClassspinner"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="35dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginStart="20dp"-->
+    <!--android:layout_marginTop="80dp"-->
+    <!--android:layout_toLeftOf="@+id/view50"-->
+    <!--android:layout_toStartOf="@+id/view50"-->
+    <!--android:background="@drawable/user_profile_fields_bg" />-->
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/attendanceClassspinner"
+        android:layout_alignEnd="@+id/attendanceClassspinner"
+        android:layout_alignRight="@+id/attendanceClassspinner"
+        android:layout_alignTop="@+id/attendanceClassspinner"
+        android:src="@drawable/picklist50" />
+
+    <Spinner
+        android:id="@+id/attendanceDivisionpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/attendanceClassspinner"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@+id/view50"
+        android:layout_toRightOf="@+id/view50"
+        android:background="@drawable/user_profile_fields_bg" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/attendanceDivisionpinner"
+        android:layout_alignEnd="@+id/attendanceDivisionpinner"
+        android:layout_alignRight="@+id/attendanceDivisionpinner"
+        android:layout_alignTop="@+id/attendanceDivisionpinner"
+        android:src="@drawable/picklist50" />
+
+
+    <Spinner
+        android:id="@+id/attendanceStudentNamespinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/user_profile_fields_bg"
+        android:layout_below="@+id/attendanceClassspinner"
+        android:layout_alignLeft="@+id/attendanceClassspinner"
+        android:layout_alignStart="@+id/attendanceClassspinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/attendanceStudentNamespinner"
+        android:layout_alignEnd="@+id/attendanceStudentNamespinner"
+        android:layout_alignRight="@+id/attendanceStudentNamespinner"
+        android:layout_alignTop="@+id/attendanceStudentNamespinner"
+        android:src="@drawable/picklist50" />
+
+
+    <Button
+        android:id="@+id/attendanceStudentViewButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/mark_attendance_new_btn"
+        android:gravity="center"
+        android:shadowColor="#7F000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="View"
+        android:textColor="#FBFBFB"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

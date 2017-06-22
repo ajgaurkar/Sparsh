@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp">
+
+    <View
+        android:id="@+id/view39"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="#9da0a0" />
+
+    <TextView
+        android:id="@+id/rewardsDialogDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/view39"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="1st in dance competition "
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <!--<View-->
+    <!--android:id="@+id/view37"-->
+    <!--android:layout_width="200dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_below="@+id/rewardsDialogDescription"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="3dp"-->
+    <!--android:background="#bfc2c2" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/rewardsDialogDescription"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:text="1st in dance competition award by principal"-->
+    <!--android:textColor="#3f3f3f"-->
+    <!--android:textSize="18sp"-->
+    <!--android:layout_below="@+id/view37"-->
+    <!--android:layout_alignEnd="@+id/view38" />-->
+
+    <RatingBar
+        android:id="@+id/rewardsDialogRatingBar"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rewardsDialogDescription"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="1.0" />
+
+    <View
+        android:id="@+id/view38"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rewardsDialogRatingBar"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="#9da0a0" />
+
+    <TextView
+        android:id="@+id/rewardsDialogdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view38"
+        android:layout_alignEnd="@+id/view38"
+        android:paddingEnd="5dp"
+        android:text="15 Jun 15"
+        android:textColor="#000"
+        android:textStyle="italic|bold" />
+</RelativeLayout>

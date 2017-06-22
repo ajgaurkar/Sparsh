@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentcontrolothers"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view44"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:id="@+id/view42"
+        android:layout_width="30dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/tagspinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@+id/view42"
+        android:layout_toStartOf="@+id/view42"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="18sp" />
+
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tagspinner"
+        android:layout_alignEnd="@+id/tagspinner"
+        android:layout_alignRight="@+id/tagspinner"
+        android:layout_alignTop="@+id/tagspinner"
+        android:src="@drawable/picklist50" />
+
+
+    <TextView
+        android:id="@+id/timepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tagspinner"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tagspinner"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_toEndOf="@+id/view42"
+        android:layout_toRightOf="@+id/view42"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Select Time  "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/tospinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/timepicker"
+        android:layout_alignLeft="@+id/tagspinner"
+        android:layout_alignRight="@+id/timepicker"
+        android:layout_alignStart="@+id/tagspinner"
+        android:layout_below="@+id/tagspinner"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="center"
+        android:padding="5dp" />
+
+    <EditText
+        android:id="@+id/descriptioneditText"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_above="@+id/view44"
+        android:layout_alignEnd="@+id/tospinner"
+        android:layout_alignLeft="@+id/tospinner"
+        android:layout_alignRight="@+id/tospinner"
+        android:layout_alignStart="@+id/tospinner"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="start"
+        android:hint="Add Description"
+        android:padding="5dp" />
+
+    <Button
+        android:id="@+id/notesSubmitButton"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorPrimary"
+        android:text="Submit"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_below="@+id/view44"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tospinner"
+        android:layout_alignEnd="@+id/tospinner"
+        android:layout_alignRight="@+id/tospinner"
+        android:layout_alignTop="@+id/tospinner"
+        android:src="@drawable/picklist50" />
+
+
+</RelativeLayout>

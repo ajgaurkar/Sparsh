@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+
+    <RelativeLayout
+        android:id="@+id/assignment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/assignment_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:tabTextAppearance="@android:style/TextAppearance.Medium"
+            android:background="@color/colorPrimary"
+            app:tabIndicatorColor="@color/white"
+            app:tabMode="fixed"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="fill"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="#ffffff" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/assignment_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/assignment_tab_layout" />
+
+        <View
+            android:id="@+id/assignmentStickView"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="35dp"
+            android:background="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/assignmentNoDataAvailable_textView"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold|italic" />
+        <!--&lt;!&ndash;android:textColor="#0d3e60"&ndash;&gt;-->
+
+        <ListView
+            android:id="@+id/assignmentlistView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/assignment_tab_layout"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:scrollbars="none" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/addAssignmentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/add48png"
+                app:backgroundTint="@color/colorAccent" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/assignment_filter_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/app_bg">
+
+        <TextView
+            android:id="@+id/startTextView"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_above="@+id/selectSubjectSpinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toLeftOf="@+id/imageView20"
+            android:background="@drawable/user_profile_fields_bg"
+            android:gravity="center"
+            android:hint="Start Date "
+            android:padding="5dp"
+            android:textColor="#000" />
+
+        <Spinner
+            android:id="@+id/selectSubjectSpinner"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_above="@+id/btnSubmit"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="125dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/user_profile_fields_bg"
+            android:gravity="center"
+            android:hint="Subject"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/selectSubjectSpinner"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/imageView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/selectSubjectSpinner"
+            android:layout_alignEnd="@+id/selectSubjectSpinner"
+            android:layout_alignRight="@+id/selectSubjectSpinner"
+            android:layout_below="@+id/imageView20"
+            android:src="@drawable/picklist50" />
+
+        <TextView
+            android:id="@+id/endTextView"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/startTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/startTextView"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/imageView20"
+            android:layout_toRightOf="@+id/imageView20"
+            android:background="@drawable/user_profile_fields_bg"
+            android:gravity="center"
+            android:hint="End Date"
+            android:padding="5dp"
+            android:textColor="#000" />
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="248dp"
+            android:background="@drawable/mark_attendance_new_btn"
+            android:gravity="center"
+            android:shadowColor="#7F000000"
+            android:shadowRadius="5"
+            android:text="Search"
+            android:textColor="#FBFBFB"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6344a5f"
+    android:choiceMode="singleChoice"
+    android:divider="#293F54"
+    android:dividerHeight="1dp"
+    android:fitsSystemWindows="true"
+    android:footerDividersEnabled="true"
+    android:minHeight="90dp"
+    tools:context=".NavigationDrawerFragment" />
+
+
+
+
+

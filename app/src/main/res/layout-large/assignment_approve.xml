@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:weightSum="30">
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="center_vertical|center"
+            android:text="Roll No."
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="14"
+            android:gravity="center_vertical|center"
+            android:text="Student Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center|right"
+            android:paddingEnd="30dp"
+            android:text="Status"
+            android:textSize="20sp"
+            android:paddingRight="30dp" />
+
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView36"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="#fff"-->
+    <!--android:gravity="center"-->
+    <!--android:text="Roll"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toEndOf="@+id/textView36"-->
+    <!--android:layout_toLeftOf="@+id/textView37"-->
+    <!--android:layout_toRightOf="@+id/textView36"-->
+    <!--android:layout_toStartOf="@+id/textView37"-->
+    <!--android:background="#fff"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:paddingStart="5dp"-->
+    <!--android:text="Student Name"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView37"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="#fff"-->
+    <!--android:gravity="center"-->
+    <!--android:text="Status"-->
+    <!--android:textSize="18sp" />-->
+
+    <View
+        android:id="@+id/assignmentprroval_snack"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/assApproveListView"
+        android:layout_alignEnd="@+id/textView37"
+        android:layout_alignRight="@+id/textView37" />
+
+    <Button
+        android:id="@+id/assApproveSubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:text="Confirm and Submit" />
+
+    <ListView
+        android:id="@+id/assApproveListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/assApproveSubmitBtn"
+        android:layout_alignLeft="@+id/assApproveSubmitBtn"
+        android:layout_alignStart="@+id/assApproveSubmitBtn"
+        android:layout_below="@+id/linearLayout" />
+
+    <ProgressBar
+        android:id="@+id/assApproveProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+
+</RelativeLayout>

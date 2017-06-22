@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_idate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/assignment_date_bg"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingEnd="8dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="8dp"
+        android:paddingStart="6dp"
+        android:paddingTop="3dp"
+        android:text="28 june"
+        android:textColor="#f6273a4e"
+        android:textStyle="bold|italic" />
+
+    <View
+        android:id="@+id/itemBody"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/txt_subject"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/txt_subject"
+        android:layout_below="@+id/txt_subject"
+        android:background="@drawable/ass_list_item_body"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#222222"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view17"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/itemBody"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/itemBody"
+        android:layout_marginBottom="13dp"
+        android:layout_alignBottom="@+id/itemBody" />
+
+    <View
+        android:id="@+id/view61"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ass_Submited_By"
+        android:layout_below="@+id/txt_subject"
+        android:layout_centerHorizontal="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/student_credits_panel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/itemBody"
+        android:layout_alignLeft="@+id/itemBody"
+        android:layout_alignStart="@+id/itemBody"
+        android:layout_below="@+id/txt_subject"
+        android:layout_margin="10dp">
+
+        <View
+            android:id="@+id/view59"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/creditsNumeratorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/view59"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/assignment_credits_numerator_bg"
+            android:gravity="center"
+            android:text="55"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/creditsDenominatorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/view59"
+            android:background="@drawable/assignment_credit_denominator_bg"
+            android:gravity="center"
+            android:text="100"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/teacher_credits_panel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/itemBody"
+        android:layout_alignLeft="@+id/itemBody"
+        android:layout_alignStart="@+id/itemBody"
+        android:layout_below="@+id/txt_subject"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_plain_bg">
+
+        <View
+            android:id="@+id/view60"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/teacher_credits_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="50"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/markText_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view60"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:text="Marks"
+            android:textColor="#fff"
+            android:textSize="8sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_subject"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/ass_title_bg_blue"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Mathematics"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/ass_Submited_By"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/attachementStatusImgView"
+        android:layout_alignLeft="@+id/itemBody"
+        android:layout_alignRight="@+id/attachementStatusImgView"
+        android:layout_alignStart="@+id/itemBody"
+        android:layout_below="@+id/itemBody"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:paddingLeft="10dp"
+        android:text="Posted by : Mr Andrews"
+        android:textColor="#4e4e4e"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:id="@+id/attachementStatusImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/student_credits_panel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txt_subject"
+        android:src="@drawable/paper_clip_24" />
+
+    <TextView
+        android:id="@+id/txt_assignmentDescript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="we need to meet class teacher we need to meet class teacherwe need to meet class teacher we need to meet class teacher "
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/student_credits_panel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/student_credits_panel"
+        android:layout_toEndOf="@+id/student_credits_panel"
+        android:layout_above="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ass_Submited_By"
+        android:layout_toEndOf="@+id/view61"
+        android:layout_toRightOf="@+id/view61"
+        android:gravity="center_horizontal"
+        android:paddingBottom="3dp"
+        android:text="Submission Date : "
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/txt_Submitdate" />
+
+    <TextView
+        android:id="@+id/txt_Submitdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ass_Submited_By"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView17"
+        android:gravity="end|left"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="3dp"
+        android:text="25 Aug 2016"
+        android:textSize="11sp"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>

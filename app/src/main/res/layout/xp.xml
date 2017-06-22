@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewAssignment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:padding="16dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/alert_detail_top_panel_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view71"
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <View
+                android:id="@+id/view72"
+                android:layout_width="10dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/alertdetailtextView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/view71"
+                android:layout_toStartOf="@+id/view71"
+                android:padding="5dp"
+                android:text="Post On "
+                android:textColor="#616060"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/alertdetail_postdate_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/alertdetailtextView18"
+                android:layout_toRightOf="@+id/alertdetailtextView18"
+                android:padding="5dp"
+                android:text="05/07/2015  12:00 PM "
+                android:textColor="#616060"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/alertdetailtextView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/alertdetailtextView18"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toLeftOf="@+id/view71"
+                android:layout_toStartOf="@+id/view71"
+                android:padding="5dp"
+                android:text="Submitted By"
+                android:textColor="#616060"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/alertdetail_postdate_textView"
+                android:layout_toRightOf="@+id/alertdetailtextView18"
+                android:padding="5dp"
+                android:text="Mr.Manoj Kumar"
+                android:textColor="#616060"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/alertdetailtextView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/alertdetailtextView19"
+                android:layout_alignStart="@+id/alertdetailtextView19"
+                android:layout_below="@+id/alertdetailtextView19"
+                android:layout_toLeftOf="@+id/view71"
+                android:layout_toStartOf="@+id/view71"
+                android:padding="5dp"
+                android:text="Category"
+                android:textColor="#616060"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/alertdetail_category_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/view71"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/view71"
+                android:layout_below="@+id/alertdetailtextView19"
+                android:padding="5dp"
+                android:text="Reports"
+                android:textColor="#616060"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/alert_detail_description_panel_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/alert_detail_top_panel_cv"
+        android:layout_alignStart="@+id/alert_detail_top_panel_cv"
+        android:layout_below="@+id/alert_detail_top_panel_cv"
+        android:layout_marginTop="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/alert_detail_description_panel_cv"
+            android:layout_alignLeft="@+id/alert_detail_description_panel_cv"
+            android:layout_alignStart="@+id/alert_detail_description_panel_cv"
+            android:layout_alignTop="@+id/alert_detail_description_panel_cv">
+
+            <TextView
+                android:id="@+id/alertdetail_title_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="3"
+                android:padding="5dp"
+                android:text="Parent Meeting  "
+                android:textColor="#616060"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/alertdetail_description_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/alertdetail_title_textView"
+                android:layout_marginBottom="20dp"
+                android:padding="5dp"
+                android:scrollbars="vertical"
+                android:text="We cordially invite you to attend the Parent-Teacher Conference on August 16, 2016 to be held at the Ambly-Redding Hall. This is an opportunity for you to learn about the academic, behavioral, and social well-being of your child and to clarify any related questions or concerns about her grades." />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/alert_detail_attachment_panel_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/alert_detail_description_panel_cv"
+        android:layout_alignStart="@+id/alert_detail_description_panel_cv"
+        android:layout_below="@+id/alert_detail_description_panel_cv"
+        android:layout_marginTop="24dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/alert_detail_attachment_panel_cv"
+            android:layout_alignLeft="@+id/alert_detail_attachment_panel_cv"
+            android:layout_alignStart="@+id/alert_detail_attachment_panel_cv"
+            android:layout_alignTop="@+id/alert_detail_attachment_panel_cv">
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/imageView13"
+                android:layout_toLeftOf="@+id/imageView17"
+                android:layout_toRightOf="@+id/imageView13"
+                android:layout_toStartOf="@+id/imageView17"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="School_On_Image-34_1466068897079.jpg"
+                android:textColor="#616060"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView20"
+                android:padding="2dp"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView20"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:padding="2dp"
+                android:src="@drawable/download64b" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

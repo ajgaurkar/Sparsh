@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Sparsh</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--<string name="login_user_role">Teacher</string>-->
+    <!--<string name="login_user_role">Student</string>-->
+
+    <string name="check_network">Check network connectivity.</string>
+    <string name="action_settings">Settings</string>
+    <string name="bullet_2_spaces">"  • "</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="loading">Loading...</string>
+    <string name="cancel">Cancel</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet">No Internet Connection...!</string>
+    <string name="noDataAvailable">No Data Available</string>
+    <string name="company_desc"><![CDATA[\nOur aim is to deliver “Reliable and Economical” Products & Software Services enabling customer growth.]]></string>
+    <string name="company_desc2"><![CDATA[\nPlease visit us http://relecotech.com \nWrite to us  sales@relecotech.com ]]></string>
+</resources>

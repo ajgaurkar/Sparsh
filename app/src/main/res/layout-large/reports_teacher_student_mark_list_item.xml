@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/markListStudentRollNoTextView"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/view27"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/markListStudentRollNoTextView"
+        android:layout_alignParentTop="true"
+        android:background="#00787878" />
+
+    <TextView
+        android:id="@+id/markListStudentNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/view27"
+        android:layout_toStartOf="@+id/markListStudentScoreTextView"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingStart="5dp"
+        android:singleLine="true"
+        android:text="Ajinkya Gaurkar"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/markListStudentScoreTextView"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/markListStudentOutOfTextView"
+        android:layout_toStartOf="@+id/markListStudentOutOfTextView"
+        android:gravity="center"
+        android:text="A+"
+        android:textColor="#3d3c3c"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/markListStudentOutOfTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:text=""
+        android:textColor="#7e7d7d"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

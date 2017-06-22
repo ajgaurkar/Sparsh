@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#104E78</color>
+    <color name="colorPrimaryDark">#0d3e60</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="btnGreen">#009688</color>
+    <color name="xpColor">#e12626</color>
+    <color name="darkRed">#ff000d</color>
+    <color name="darkBlue">#001aff</color>
+    <color name="grey">#afafaf</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00030303</color>
+    <color name="xyz">#00ffffff</color>
+    <color name="black">#000000</color>
+    <color name="colorNormalCheckBox">#FFF</color>
+    <color name="colorActivatedCheckBox">#FFF</color>
+    <color name="colorHeadingColor">#413f3f</color>
+    <color name="colorNavLarge">#555656</color>
+
+</resources>

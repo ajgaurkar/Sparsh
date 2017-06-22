@@ -1,0 +1,197 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <View
+        android:id="@+id/view24"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:id="@+id/view20"
+        android:layout_width="15dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/spinnerAlertClass"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/spinnerAlertTag"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/spinnerAlertTag"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/view20"
+        android:background="@drawable/user_profile_fields_bg" />
+
+    <Spinner
+        android:id="@+id/spinnerAlertDivision"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/spinnerAlertPriority"
+        android:layout_alignRight="@+id/spinnerAlertPriority"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/view20"
+        android:background="@drawable/user_profile_fields_bg" />
+
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinnerAlertClass"
+        android:layout_toLeftOf="@+id/view20"
+        android:layout_toStartOf="@+id/view20"
+        android:src="@drawable/picklist50" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spinnerAlertDivision"
+        android:layout_alignRight="@+id/spinnerAlertDivision"
+        android:layout_alignTop="@+id/spinnerAlertDivision"
+        android:src="@drawable/picklist50" />
+
+
+    <Spinner
+        android:id="@+id/spinnerAlertTag"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/spinnerAlertStudent"
+        android:layout_alignStart="@+id/spinnerAlertStudent"
+        android:layout_below="@+id/spinnerAlertClass"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/view20"
+        android:background="@drawable/user_profile_fields_bg" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView28"
+        android:layout_alignEnd="@+id/spinnerAlertTag"
+        android:layout_alignLeft="@+id/imageView25"
+        android:layout_alignRight="@+id/spinnerAlertTag"
+        android:layout_alignStart="@+id/imageView25"
+        android:layout_alignTop="@+id/spinnerAlertTag"
+        android:src="@drawable/picklist50" />
+
+    <Spinner
+        android:id="@+id/spinnerAlertPriority"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/spinnerAlertStudent"
+        android:layout_alignRight="@+id/spinnerAlertStudent"
+        android:layout_alignTop="@+id/spinnerAlertTag"
+        android:layout_below="@+id/spinnerAlertDivision"
+        android:layout_toRightOf="@+id/view20"
+        android:background="@drawable/user_profile_fields_bg" />
+
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spinnerAlertPriority"
+        android:layout_alignRight="@+id/spinnerAlertPriority"
+        android:layout_alignTop="@+id/spinnerAlertPriority"
+        android:src="@drawable/picklist50" />
+
+
+    <Spinner
+        android:id="@+id/spinnerAlertStudent"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/alertTitletextView"
+        android:layout_alignLeft="@+id/alertTitletextView"
+        android:layout_alignRight="@+id/alertTitletextView"
+        android:layout_alignStart="@+id/alertTitletextView"
+        android:layout_below="@+id/spinnerAlertTag"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/user_profile_fields_bg" />
+
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinnerAlertStudent"
+        android:layout_alignEnd="@+id/spinnerAlertStudent"
+        android:layout_alignRight="@+id/spinnerAlertStudent"
+        android:src="@drawable/picklist50" />
+
+
+    <EditText
+        android:id="@+id/alertTitletextView"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinnerAlertStudent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/user_profile_fields_bg"
+        android:ellipsize="end"
+        android:hint="Title"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/alertTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/alertAttachmentTextView"
+        android:layout_alignLeft="@+id/alertTitletextView"
+        android:layout_alignStart="@+id/alertTitletextView"
+        android:layout_below="@+id/alertTitletextView"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/user_profile_fields_bg"
+        android:gravity="start"
+        android:hint="Add description here"
+        android:paddingLeft="4dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="3dp"
+        android:layout_alignRight="@+id/alertTitletextView"
+        android:layout_alignEnd="@+id/alertTitletextView" />
+
+    <TextView
+        android:id="@+id/alertAttachmentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/alertTextDescription"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/alertTextDescription"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/attachmentImageView"
+        android:drawableRight="@drawable/cross25"
+        android:layout_toRightOf="@+id/attachmentImageView" />
+
+    <ImageView
+        android:id="@+id/attachmentImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/alertAttachmentTextView"
+        android:layout_alignTop="@+id/alertAttachmentTextView"
+        android:src="@drawable/menu_attachment"
+        android:layout_alignLeft="@+id/alertTextDescription"
+        android:layout_alignStart="@+id/alertTextDescription" />
+
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/assignment_date_bg"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="3dp"
+        android:text="28 june"
+        android:textColor="#f6273a4e"
+        android:textStyle="bold|italic"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="11dp" />
+
+    <TextView
+        android:id="@+id/txt_Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/txt_Title"
+        android:layout_below="@+id/txt_Title"
+        android:background="@drawable/ass_list_item_body"
+        android:paddingBottom="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/txt_Title" />
+
+    <TextView
+        android:id="@+id/txt_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/ass_title_bg_blue"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true" />
+
+
+    <TextView
+        android:id="@+id/txt_Submited_By_or_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txt_Body"
+        android:layout_below="@+id/txt_Body"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#4e4e4e"
+        android:textStyle="italic"
+        android:layout_alignLeft="@+id/txt_Body" />
+
+
+    <ImageView
+        android:id="@+id/attachementStatusImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/paper_clip_24"
+        android:layout_above="@+id/txt_Body"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/txt_Title" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt_more_btn"-->
+    <!--android:layout_width="70dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignTop="@+id/txt_Submited_By"-->
+    <!--android:text="  More"-->
+    <!--android:textColor="#ffffff"-->
+    <!--android:background="@drawable/alert_morebtn_bg"-->
+    <!--android:textStyle="bold|italic" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/imageView10"-->
+    <!--android:src="@drawable/more32"-->
+    <!--android:layout_below="@+id/txt_Body"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignBottom="@+id/txt_more_btn" />-->
+
+
+</RelativeLayout>
