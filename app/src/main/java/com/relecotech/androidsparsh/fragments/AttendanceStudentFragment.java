@@ -88,7 +88,7 @@ public class AttendanceStudentFragment extends Fragment {
         System.out.println("markedDate : " + sessionManager.getSharedPrefItem(SessionManager.KEY_LATEST_ATTENDANCE_MARK_DATE));
 
         //initializing student table object
-        mobileServiceJsonTable = MainActivity.mClient.getTable("student");
+//not needed        mobileServiceJsonTable = MainActivity.mClient.getTable("student");
 
     }
 
@@ -145,18 +145,23 @@ public class AttendanceStudentFragment extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 attendanceClass = classSpinner.getSelectedItem().toString();
 
-//      setting fetched data to division selection spinner
                 List<String> divlist = new ArrayList<>();
-                schoolClassCursorData.moveToFirst();
-                do {
-                    if (schoolClassCursorData.getString(2).equals(attendanceClass)) {
-                        if (!divlist.contains(schoolClassCursorData.getString(3))) {
-                            divlist.add(schoolClassCursorData.getString(3));
-                            System.out.println("divlist : " + divlist);
-                        }
-                    }
-                } while (schoolClassCursorData.moveToNext());
+                try {
 
+                    //      setting fetched data to division selection spinner
+                    schoolClassCursorData.moveToFirst();
+                    do {
+                        if (schoolClassCursorData.getString(2).equals(attendanceClass)) {
+                            if (!divlist.contains(schoolClassCursorData.getString(3))) {
+                                divlist.add(schoolClassCursorData.getString(3));
+                                System.out.println("divlist : " + divlist);
+                            }
+                        }
+                    } while (schoolClassCursorData.moveToNext());
+
+                } catch (Exception e) {
+                    System.out.println("Exception in class spinner of attendancestudfrag");
+                }
                 divlist.add("[ Division ]");
                 ArrayAdapter adapterDivision = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, divlist);
                 adapterDivision.setDropDownViewResource(R.layout.spinner_dropdown_item);
@@ -174,19 +179,23 @@ public class AttendanceStudentFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 attendanceDivision = divisionSpinner.getSelectedItem().toString();
-                schoolClassCursorData.moveToFirst();
-                do {
-                    if (schoolClassCursorData.getString(2).equals(attendanceClass) && schoolClassCursorData.getString(3).equals(attendanceDivision)) {
-                        attendanceSchoolClassId = schoolClassCursorData.getString(1);
-                        System.out.println(" attendanceSchoolClassId : " + attendanceSchoolClassId);
+                try {
+                    schoolClassCursorData.moveToFirst();
+                    do {
+                        if (schoolClassCursorData.getString(2).equals(attendanceClass) && schoolClassCursorData.getString(3).equals(attendanceDivision)) {
+                            attendanceSchoolClassId = schoolClassCursorData.getString(1);
+                            System.out.println(" attendanceSchoolClassId : " + attendanceSchoolClassId);
+                        }
+                    } while (schoolClassCursorData.moveToNext());
+
+                    if ((!classSpinner.getSelectedItem().equals("[ Class ]")) && (!divisionSpinner.getSelectedItem().equals("[ Division ]"))) {
+
+                        System.out.println(" Student Tab ");
+                        //new FetchingStudent().execute();
+                        FetchStudentList();
                     }
-                } while (schoolClassCursorData.moveToNext());
-
-                if ((!classSpinner.getSelectedItem().equals("[ Class ]")) && (!divisionSpinner.getSelectedItem().equals("[ Division ]"))) {
-
-                    System.out.println(" Student Tab ");
-                    //new FetchingStudent().execute();
-                    FetchStudentList();
+                } catch (Exception e) {
+                    System.out.println("Exception in div spinner of attendancestudfrag");
                 }
             }
 

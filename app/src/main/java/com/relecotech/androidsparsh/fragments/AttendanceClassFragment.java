@@ -108,32 +108,40 @@ public class AttendanceClassFragment extends Fragment {
     }
 
     private void setDraftMetaData() {
-        //setting draft metadata to draft list
-        draftCursor = databaseHandler.geAttendanceDraftMetaData();
-        draftList = new ArrayList<>();
-        draftCount = draftCursor.getCount();
 
-        if (draftCursor.moveToFirst()) {
-            do {
-                System.out.println("draftCursor ------- " + draftCursor.getString(0) + " " + draftCursor.getString(1));
+        try {
 
-                //getting class division from schoolclass id
-                Cursor classDivisionCursor = databaseHandler.getClassDivisionByClassId(draftCursor.getString(1));
-                classDivisionCursor.moveToFirst();
-                System.out.println("classDivisionCursor ------- :" + classDivisionCursor.getString(0) + " " + classDivisionCursor.getString(1));
 
-                draftList.add(new AttendanceDraftListData(draftCursor.getString(1),
-                        classDivisionCursor.getString(0), classDivisionCursor.getString(1), draftCursor.getString(0)));
+            //setting draft metadata to draft list
+            draftCursor = databaseHandler.geAttendanceDraftMetaData();
+            draftList = new ArrayList<>();
+            draftCount = draftCursor.getCount();
 
-            } while (draftCursor.moveToNext());
+            if (draftCursor.moveToFirst()) {
+                do {
+                    System.out.println("draftCursor ------- " + draftCursor.getString(0) + " " + draftCursor.getString(1));
+
+                    //getting class division from schoolclass id
+                    Cursor classDivisionCursor = databaseHandler.getClassDivisionByClassId(draftCursor.getString(1));
+                    classDivisionCursor.moveToFirst();
+                    System.out.println("classDivisionCursor ------- :" + classDivisionCursor.getString(0) + " " + classDivisionCursor.getString(1));
+
+                    draftList.add(new AttendanceDraftListData(draftCursor.getString(1),
+                            classDivisionCursor.getString(0), classDivisionCursor.getString(1), draftCursor.getString(0)));
+
+                } while (draftCursor.moveToNext());
+            }
+
+            draftTitleTextView.setVisibility(View.VISIBLE);
+            if (draftList.size() == 0) {
+                draftTitleTextView.setVisibility(View.INVISIBLE);
+            }
+            draftAdapter = new AttendanceDraftAdapterAdapter(getActivity(), draftList);
+            draftListView.setAdapter(draftAdapter);
+
+        } catch (Exception e) {
+            System.out.println("Exception attendanceClassFragment " + e.getMessage());
         }
-
-        draftTitleTextView.setVisibility(View.VISIBLE);
-        if (draftList.size() == 0) {
-            draftTitleTextView.setVisibility(View.INVISIBLE);
-        }
-        draftAdapter = new AttendanceDraftAdapterAdapter(getActivity(), draftList);
-        draftListView.setAdapter(draftAdapter);
 
     }
 
@@ -180,24 +188,24 @@ public class AttendanceClassFragment extends Fragment {
                 }
             } while (schoolClassCursorData.moveToNext());
 
-            classlist.add("[ Class ]");
-            ArrayAdapter adapterClass = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, classlist);
-            adapterClass.setDropDownViewResource(R.layout.spinner_dropdown_item);
-            classSpinner.setAdapter(adapterClass);
-            classSpinner.setSelection(adapterClass.getCount() - 1);
-
-
-            //  setting default data to division spinner
-
-            divlist.add("[ Division ]");
-            ArrayAdapter adapterDivision = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, divlist);
-            adapterDivision.setDropDownViewResource(R.layout.spinner_dropdown_item);
-            divisionSpinner.setAdapter(adapterDivision);
-            divisionSpinner.setSelection(adapterDivision.getCount() - 1);
 
         } catch (Exception e) {
             System.out.println(" INSIDE Attendance CLass Fragment" + e.getMessage());
         }
+
+        classlist.add("[ Class ]");
+        ArrayAdapter adapterClass = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, classlist);
+        adapterClass.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        classSpinner.setAdapter(adapterClass);
+        classSpinner.setSelection(adapterClass.getCount() - 1);
+
+
+        //  setting default data to division spinner
+        divlist.add("[ Division ]");
+        ArrayAdapter adapterDivision = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, divlist);
+        adapterDivision.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        divisionSpinner.setAdapter(adapterDivision);
+        divisionSpinner.setSelection(adapterDivision.getCount() - 1);
 
         classSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -206,16 +214,20 @@ public class AttendanceClassFragment extends Fragment {
 
 //      setting fetched data to division selection spinner
                 List<String> divlist = new ArrayList<>();
-                schoolClassCursorData.moveToFirst();
-                do {
-                    if (schoolClassCursorData.getString(2).equals(attendanceClass)) {
-                        if (!divlist.contains(schoolClassCursorData.getString(3))) {
-                            divlist.add(schoolClassCursorData.getString(3));
-                            System.out.println("divlist : " + divlist);
+                try {
+                    schoolClassCursorData.moveToFirst();
+                    do {
+                        if (schoolClassCursorData.getString(2).equals(attendanceClass)) {
+                            if (!divlist.contains(schoolClassCursorData.getString(3))) {
+                                divlist.add(schoolClassCursorData.getString(3));
+                                System.out.println("divlist : " + divlist);
+                            }
                         }
-                    }
-                } while (schoolClassCursorData.moveToNext());
+                    } while (schoolClassCursorData.moveToNext());
 
+                } catch (Exception e) {
+                    System.out.println("Exception in class spinner of attendanceClassFrag");
+                }
                 divlist.add("[ Division ]");
                 ArrayAdapter adapterDivision = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, divlist);
                 adapterDivision.setDropDownViewResource(R.layout.spinner_dropdown_item);
@@ -232,13 +244,17 @@ public class AttendanceClassFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 attendanceDivision = divisionSpinner.getSelectedItem().toString();
-                schoolClassCursorData.moveToFirst();
-                do {
-                    if (schoolClassCursorData.getString(2).equals(attendanceClass) && schoolClassCursorData.getString(3).equals(attendanceDivision)) {
-                        attendanceSchoolClassId = schoolClassCursorData.getString(1);
-                        System.out.println(" attendanceSchoolClassId : " + attendanceSchoolClassId);
-                    }
-                } while (schoolClassCursorData.moveToNext());
+                try {
+                    schoolClassCursorData.moveToFirst();
+                    do {
+                        if (schoolClassCursorData.getString(2).equals(attendanceClass) && schoolClassCursorData.getString(3).equals(attendanceDivision)) {
+                            attendanceSchoolClassId = schoolClassCursorData.getString(1);
+                            System.out.println(" attendanceSchoolClassId : " + attendanceSchoolClassId);
+                        }
+                    } while (schoolClassCursorData.moveToNext());
+                } catch (Exception e) {
+                    System.out.println("Exception in class spinner of attendanceClassFrag");
+                }
 
             }
 
