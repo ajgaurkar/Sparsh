@@ -51,7 +51,7 @@ public class Route_Tab_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), MapsActivity.class);
-                intent.putStringArrayListExtra("pickPoint",pickPointList);
+                intent.putStringArrayListExtra("pickPoint", pickPointList);
                 startActivity(intent);
             }
         });
@@ -61,6 +61,7 @@ public class Route_Tab_Fragment extends Fragment {
         String schedule = getRouteListData.getSchedule();
 
         String dirStr = schedule.substring(schedule.indexOf("-") + 1, schedule.length());
+        System.out.println(" getRouteListData.getBus_Direc() " + getRouteListData.getBus_Direc());
 
         StringTokenizer st = new StringTokenizer(dirStr, "+");
         while (st.hasMoreTokens()) {
@@ -75,13 +76,13 @@ public class Route_Tab_Fragment extends Fragment {
 
             //Extract time & location from substring tmpStr
             String time = tmpStr.substring(tmpStr.indexOf("-") + 1, tmpStr.indexOf("%"));
-            String stop = tmpStr.substring(tmpStr.indexOf("%") + 1,tmpStr.indexOf("$"));
+            String stop = tmpStr.substring(tmpStr.indexOf("%") + 1, tmpStr.indexOf("$"));
             String stopPoints = tmpStr.substring(tmpStr.indexOf("$") + 1, tmpStr.length());
 
             pickPointList.add(stopPoints);
             System.out.println("time " + time);
             System.out.println("stop " + stop);
-            busTrackerList.add(new BusTrackerListData(time, stop, null, null, null, null));
+            busTrackerList.add(new BusTrackerListData(time, stop, getRouteListData.getBus_Direc(), null, null, null, null));
         }
 
 //        busTrackerAdapter = new BusTracker_Adapter(getActivity(), busTrackerList);

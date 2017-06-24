@@ -28,6 +28,7 @@ public class BusTracker_Adapter extends BaseAdapter {
     private class ViewHolder {
         TextView txtTime;
         TextView txtStop;
+        TextView txtDirection;
         TextView txtBusNo;
         TextView txtRouteNo;
         TextView txtxSchedule;
@@ -74,8 +75,10 @@ public class BusTracker_Adapter extends BaseAdapter {
             viewHolder = new ViewHolder();
 //            LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.bus_listitem, parent, false);
+
             viewHolder.txtTime = (TextView) convertView.findViewById(R.id.textTimeVal);
             viewHolder.txtStop = (TextView) convertView.findViewById(R.id.textStopVal);
+            viewHolder.txtDirection = (TextView) convertView.findViewById(R.id.textDirectionVal);
 
             convertView.setTag(viewHolder);
         } else {
@@ -118,6 +121,7 @@ public class BusTracker_Adapter extends BaseAdapter {
 
         viewHolder.txtTime.setText(busTrackerListData.getTime());
         viewHolder.txtStop.setText(busTrackerListData.getStop());
+        viewHolder.txtDirection.setText(busTrackerListData.getBus_Direc());
 //        viewHolder.txtStop.setText(busTrackerListData.getRoute_no());
 //        viewHolder.txtStop.setText(busTrackerListData.getSchedule());
 //        viewHolder.txtStop.setText(busTrackerListData.getStrech());

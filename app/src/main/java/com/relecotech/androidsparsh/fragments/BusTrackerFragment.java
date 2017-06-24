@@ -154,12 +154,12 @@ public class BusTrackerFragment extends android.support.v4.app.Fragment {
 //        mobileServiceJsonTable = MainActivity.mClient.getTable("Bus_schedule");
 
         String busId = userDetails.get(SessionManager.KEY_BUS_ID);
-        System.out.println( " Bus Id " + busId);
-        if(busId==null){
-            System.out.println( " INSIDE If  Bus Id " + busId);
+        System.out.println(" Bus Id " + busId);
+        if (busId == null) {
+            System.out.println(" INSIDE If  Bus Id " + busId);
             noDataAvailable_TextView.setVisibility(View.VISIBLE);
             noDataAvailable_TextView.setText("Not Opted for Bus Service!");
-        }else {
+        } else {
             noDataAvailable_TextView.setVisibility(View.INVISIBLE);
             if (sessionManager.getSharedPrefItem(SessionManager.KEY_BUSSCHEDULE_JSON) == null) {
 
@@ -368,11 +368,11 @@ public class BusTrackerFragment extends android.support.v4.app.Fragment {
 
                     if (scheduleUp.contains("Up")) {
 
-                        RouteUp.put(route_no, new BusTrackerListData(time, stop, bus_route, bus_no, route_no, scheduleUp));
+                        RouteUp.put(route_no, new BusTrackerListData(time, stop, "Up", bus_route, bus_no, route_no, scheduleUp));
                     }
                     if (scheduleDown.contains("Down")) {
 
-                        RouteDown.put(route_no, new BusTrackerListData(time, stop, bus_route, bus_no, route_no, scheduleDown));
+                        RouteDown.put(route_no, new BusTrackerListData(time, stop, "Down", bus_route, bus_no, route_no, scheduleDown));
                     }
 
                 }
@@ -391,7 +391,7 @@ public class BusTrackerFragment extends android.support.v4.app.Fragment {
                 progressDialog.dismiss();
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Bus Tracker Fragment " + e.getMessage());
         }
     }
@@ -460,12 +460,12 @@ public class BusTrackerFragment extends android.support.v4.app.Fragment {
         if (id == R.id.refresh_dashboard) {
             if (checkConnection) {
                 String busId = userDetails.get(SessionManager.KEY_BUS_ID);
-                System.out.println( " Bus Id " + busId);
-                if(busId==null){
-                    System.out.println( " INSIDE If  Bus Id " + busId);
+                System.out.println(" Bus Id " + busId);
+                if (busId == null) {
+                    System.out.println(" INSIDE If  Bus Id " + busId);
                     noDataAvailable_TextView.setVisibility(View.VISIBLE);
                     noDataAvailable_TextView.setText("Not Opted for Bus Service!");
-                }else {
+                } else {
                     noDataAvailable_TextView.setVisibility(View.INVISIBLE);
                     if (flagRefresh == true) {
 

@@ -78,6 +78,7 @@ public class GalleryAdapter extends BaseAdapter {
         Glide.with(context).load(galleryListData.getUrl())
                 .thumbnail(0.5f)
                 .crossFade()
+                .override(100,100)
                 .placeholder(android.R.drawable.ic_menu_gallery)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.galleryImg);
