@@ -80,6 +80,8 @@ public class AlertFragment extends android.support.v4.app.Fragment implements Sw
     private TextView noDataAvailableTextView;
     private boolean flagRefresh = true;
 
+    //Commit changes from amey in master
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
