@@ -135,7 +135,7 @@ public class EditUserDetails extends Activity {
                 if (!userDetails.get(SessionManager.KEY_EMERGENCY_CONTACT).equals("null")) {
                     userDetailListDataArrayList.add(new UserDetailListData("Emergency contact", userDetails.get(SessionManager.KEY_EMERGENCY_CONTACT), R.drawable.contact_64));
                 }
-                if (userDetails.get(SessionManager.KEY_GENDER).equals("Male")) {
+                if (userDetails.get(SessionManager.KEY_GENDER).equals("M")||userDetails.get(SessionManager.KEY_GENDER).equals("Male")) {
                     userDetailListDataArrayList.add(new UserDetailListData("Gender", "Male", R.drawable.gender_64));
                 } else {
                     userDetailListDataArrayList.add(new UserDetailListData("Gender", "Female", R.drawable.gender_64));
@@ -203,14 +203,14 @@ public class EditUserDetails extends Activity {
                     userDetailListDataArrayList.add(new UserDetailListData("Address", userDetails.get(SessionManager.KEY_ADDRESS), R.drawable.house_color_64));
                 }
 
-                if (userDetails.get(SessionManager.KEY_GENDER).equals("M")) {
+                if (userDetails.get(SessionManager.KEY_GENDER).equals("M")||userDetails.get(SessionManager.KEY_GENDER).equals("Male")) {
                     userDetailListDataArrayList.add(new UserDetailListData("Gender", "Male", R.drawable.gender_64));
                 } else {
                     userDetailListDataArrayList.add(new UserDetailListData("Gender", "Female", R.drawable.gender_64));
                 }
 
                 if (userDetails.get(SessionManager.KEY_SPECIALITY).equals("null")) {
-                    userDetailListDataArrayList.add(new UserDetailListData("Specility", userDetails.get(SessionManager.KEY_SPECIALITY), R.drawable.speciality_64));
+                    userDetailListDataArrayList.add(new UserDetailListData("Speciality", userDetails.get(SessionManager.KEY_SPECIALITY), R.drawable.speciality_64));
                 }
 
                 if (!userDetails.get(SessionManager.KEY_MARITAL_STATUS).equals("null")) {

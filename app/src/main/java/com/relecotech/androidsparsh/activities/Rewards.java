@@ -101,7 +101,7 @@ public class Rewards extends AppCompatActivity {
     private List<String> classlist;
     private List<String> divlist;
     private ArrayAdapter<String> adapterStudentName;
-    private String queryCondtionParam;
+    private String queryConditionParam;
     private ProgressDialog rewardsProgressDialog;
     private Handler rewardsHandler;
     private TimeOutTimerClass timeOutTimerClass;
@@ -166,9 +166,9 @@ public class Rewards extends AppCompatActivity {
             studentNameTextView.setText(MainActivity.username);
             String studentID = userDetails.get(SessionManager.KEY_STUDENT_ID);
              /*
-             Fetech rewards Data Task calling
+             Fetch rewards Data Task calling
              */
-            fetechRewardsData(studentID);
+            fetchRewardsData(studentID);
         }
 
         if (userRole.equals("Teacher")) {
@@ -304,7 +304,7 @@ public class Rewards extends AppCompatActivity {
                                 /*
                                Fetech rewards Data Task calling
                                  */
-                                fetechRewardsData(selectedStudentID);
+                                fetchRewardsData(selectedStudentID);
 
 
                             } else {
@@ -469,8 +469,8 @@ public class Rewards extends AppCompatActivity {
         });
     }
 
-    public void fetechRewardsData(String parameter) {
-        queryCondtionParam = parameter;
+    public void fetchRewardsData(String parameter) {
+        queryConditionParam = parameter;
         rewardDataAsynTask = new RewardDataAsynTask();
         rewardDataAsynTask.execute();
         rewards_Timer.schedule(timeOutTimerClass, TIMEOUT_TIME, 1000);
@@ -552,7 +552,7 @@ public class Rewards extends AppCompatActivity {
         protected Void doInBackground(Void... params) {
 
             try {
-                rewardJsonElement = rewardJsonDataTable.where().field("School_Class_id").eq(schoolClassID).execute().get();
+                rewardJsonElement = rewardJsonDataTable.where().field("Student_id").eq(queryConditionParam).execute().get();
                 System.out.println("rewardJsonElement response " + rewardJsonElement);
             } catch (InterruptedException e) {
                 e.printStackTrace();

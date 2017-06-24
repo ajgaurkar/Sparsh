@@ -103,11 +103,6 @@ public class Gallery extends AppCompatActivity {
 
         userRole = userDetails.get(SessionManager.KEY_USER_ROLE);
         loggedInUserForGalleryListAdapter = userRole;
-//        try {
-//            mobileServiceJsonTable = MainActivity.mClient.getTable("Gallery");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
 
         if (checkConnection) {
             onExecutionStart();
