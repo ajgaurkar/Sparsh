@@ -57,6 +57,7 @@ import java.util.TimeZone;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.TreeSet;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 
@@ -94,7 +95,7 @@ public class AttendanceStudentIndividual extends Activity {
     private Integer positionVal;
     private Handler attendance_Handler;
     private static Timer attendance_Timer;
-    private TimeOutTimerClass timeOutTimerClass;
+    private TimeOutTimerClass attendanceTimeOutTimerClass;
     private long TIMEOUT_TIME = 15000;
     ;
 
@@ -114,7 +115,7 @@ public class AttendanceStudentIndividual extends Activity {
         Log.d("login_user_role", userRole);
 
         attendance_Handler = new Handler();
-        timeOutTimerClass = new TimeOutTimerClass();
+        attendanceTimeOutTimerClass = new TimeOutTimerClass();
         attendance_Timer = new Timer();
 
         attendanceProgressDialog = new ProgressDialog(this);
@@ -258,19 +259,19 @@ public class AttendanceStudentIndividual extends Activity {
 
     public void onExecutionStart() {
         attendance_Timer = new Timer("attendanceTimer", true);
-        timeOutTimerClass = new TimeOutTimerClass();
+        attendanceTimeOutTimerClass = new TimeOutTimerClass();
         attendanceProgressDialog.show();
         FetchStudentAttendance();
-        attendance_Timer.schedule(timeOutTimerClass, TIMEOUT_TIME, 1000);
+        attendance_Timer.schedule(attendanceTimeOutTimerClass, TIMEOUT_TIME, 1000);
         System.out.println("onExecutionStart---");
     }
 
     public void reScheduleTimer() {
         attendance_Timer = new Timer("attendanceTimer", true);
-        timeOutTimerClass = new TimeOutTimerClass();
+        attendanceTimeOutTimerClass = new TimeOutTimerClass();
         attendanceProgressDialog.show();
         FetchStudentAttendance();
-        attendance_Timer.schedule(timeOutTimerClass, TIMEOUT_TIME, 1000);
+        attendance_Timer.schedule(attendanceTimeOutTimerClass, TIMEOUT_TIME, 1000);
         System.out.println("onExecutionStart---");
     }
 
@@ -287,6 +288,7 @@ public class AttendanceStudentIndividual extends Activity {
             public void onFailure(Throwable exception) {
                 resultFuture.setException(exception);
                 System.out.println("Attendance Individual exception    " + exception);
+                attendanceTimeOutTimerClass.check = false;
             }
 
             @Override
@@ -309,8 +311,10 @@ public class AttendanceStudentIndividual extends Activity {
 
         try {
             if (attendanceArray.size() == 0) {
+                attendanceTimeOutTimerClass.check = false;
                 Log.d("json not received", "not received");
             } else {
+                attendanceTimeOutTimerClass.check = true;
                 for (int k = 0; k < attendanceArray.size(); k++) {
                     JsonObject jsonObjectforIteration = attendanceArray.get(k).getAsJsonObject();
                     String studentAttendanceStatus = jsonObjectforIteration.get("status").toString().replace("\"", "");
@@ -682,7 +686,7 @@ public class AttendanceStudentIndividual extends Activity {
             attendance_Handler.post(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println("check Variable Assignment" + check);
+                    System.out.println("check Variable AttendanceStudentIndividual " + check);
                     if (!check) {
 
                         attendance_Timer.cancel();
@@ -697,9 +701,7 @@ public class AttendanceStudentIndividual extends Activity {
                                     System.out.println("Dialog Retry Button call");
 
                                     attendanceProgressDialog.show();
-
 //                                        stick.setVisibility(View.INVISIBLE);
-
                                     reScheduleTimer();
 
                                 }
@@ -711,24 +713,6 @@ public class AttendanceStudentIndividual extends Activity {
                                     attendance_Timer.purge();
                                     attendance_Timer.cancel();
                                     onBackPressed();
-
-//                                    System.out.println(" UserRole " + userRole);
-
-//                                        if (userRole.equals("Teacher")) {
-//
-//                                            Fragment fragment = new DashboardTeacherFragment();
-//                                            FragmentTransaction ft = ge;
-//                                            ft.replace(R.id.content_frame, fragment);
-//                                            ft.commit();
-//
-//                                        } else {
-//
-//                                            Fragment fragment = new DashboardStudentFragment();
-//                                            FragmentTransaction ft = getFragmentManager().beginTransaction();
-//                                            ft.replace(R.id.content_frame, fragment);
-//                                            ft.commit();
-//                                        }
-
                                 }
                             });
                             dialogBuilder.create().show();
@@ -739,7 +723,7 @@ public class AttendanceStudentIndividual extends Activity {
 
                     } else {
                         attendance_Timer.cancel();
-                        System.out.println("Timer Cancelled Assignment");
+                        System.out.println("Timer Cancelled AttendanceStudentIndividual");
                     }
                 }
             });

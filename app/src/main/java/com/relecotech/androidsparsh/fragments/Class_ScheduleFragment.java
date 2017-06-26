@@ -203,6 +203,13 @@ public class Class_ScheduleFragment extends android.support.v4.app.Fragment {
 
             }
         } else {
+
+            if (userRole.equals("Teacher")) {
+                teacher_class_name_TextView.setText("Class");
+            }
+            if (userRole.equals("Student")) {
+                teacher_class_name_TextView.setText("Teacher");
+            }
             Class_Schedule_JSON_Parsing(new JsonParser().parse(sessionManager.getSharedPrefItem(SessionManager.KEY_CLASS_SCHEDULE_JSON)));
 
         }

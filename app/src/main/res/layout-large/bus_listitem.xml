@@ -1,55 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:background="@drawable/bottom_partition_bg"
         android:orientation="horizontal"
-        android:weightSum="20"
-        android:layout_below="@+id/busTracker_tab_layout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:weightSum="20">
 
 
         <TextView
             android:id="@+id/textTimeVal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/background_dark"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/busTracker_tab_layout"
-            android:text="7:30am"
             android:layout_weight="6"
-            android:paddingStart="20dp"
+            android:paddingBottom="8dp"
+            android:paddingEnd="8dp"
             android:paddingLeft="20dp"
             android:paddingRight="8dp"
-            android:paddingEnd="8dp"
+            android:paddingStart="20dp"
             android:paddingTop="8dp"
-            android:paddingBottom="8dp" />
+            android:text=""
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
 
 
         <TextView
             android:id="@+id/textStopVal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/textTime"
-            android:text="Bardi"
-            android:textColor="@android:color/background_dark"
-            android:layout_weight="14"
-            android:textStyle="bold"
-            android:paddingTop="8dp"
+            android:layout_weight="10"
             android:paddingBottom="8dp"
+            android:paddingLeft="5dp"
             android:paddingStart="5dp"
-            android:paddingLeft="5dp" />
+            android:paddingTop="8dp"
+            android:text=""
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
+
+        <TextView
+            android:id="@+id/textDirectionVal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="8dp"
+            android:text=""
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
