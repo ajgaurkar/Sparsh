@@ -1,4 +1,4 @@
-package com.relecotech.androidsparsh.fragments;
+package com.relecotech.androidsparsh_rukmin.fragments;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -28,12 +28,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceJsonTable;
-import com.relecotech.androidsparsh.ConnectionDetector;
-import com.relecotech.androidsparsh.MainActivity;
-import com.relecotech.androidsparsh.R;
-import com.relecotech.androidsparsh.SessionManager;
-import com.relecotech.androidsparsh.adapters.ClassSchedule_PagerAdapter;
-import com.relecotech.androidsparsh.controllers.StudentTimeTableListData;
+import com.relecotech.androidsparsh_rukmin.ConnectionDetector;
+import com.relecotech.androidsparsh_rukmin.MainActivity;
+import com.relecotech.androidsparsh_rukmin.R;
+import com.relecotech.androidsparsh_rukmin.SessionManager;
+import com.relecotech.androidsparsh_rukmin.adapters.ClassSchedule_PagerAdapter;
+import com.relecotech.androidsparsh_rukmin.controllers.StudentTimeTableListData;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -203,6 +203,13 @@ public class Class_ScheduleFragment extends android.support.v4.app.Fragment {
 
             }
         } else {
+
+            if (userRole.equals("Teacher")) {
+                teacher_class_name_TextView.setText("Class");
+            }
+            if (userRole.equals("Student")) {
+                teacher_class_name_TextView.setText("Teacher");
+            }
             Class_Schedule_JSON_Parsing(new JsonParser().parse(sessionManager.getSharedPrefItem(SessionManager.KEY_CLASS_SCHEDULE_JSON)));
 
         }
