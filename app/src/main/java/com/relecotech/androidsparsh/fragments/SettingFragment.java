@@ -65,7 +65,7 @@ public class SettingFragment extends android.support.v4.app.Fragment {
 
         setting_AboutTextView = (TextView) rootView.findViewById(R.id.aboutTextView);
 
-        userRole = MainActivity.userRole;
+        userRole =userDetails.get(SessionManager.KEY_USER_ROLE);
 //        if (userRole.equals("Teacher")){
 //
 //        }

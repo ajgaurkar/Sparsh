@@ -16,9 +16,11 @@ import com.relecotech.androidsparsh.DatabaseHandler;
 import com.relecotech.androidsparsh.MainActivity;
 import com.relecotech.androidsparsh.R;
 import com.relecotech.androidsparsh.SessionManager;
+import com.relecotech.androidsparsh.activities.Rewards;
 import com.relecotech.androidsparsh.adapters.AttendancePagerAdapter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by amey on 10/16/2015.
@@ -38,6 +40,7 @@ public class AttendanceTeacherFragment extends android.support.v4.app.Fragment {
     FragmentManager fragmentManager;
     private Fragment mFragment;
     String user;
+    private HashMap<String, String> userDetails;
 
 
     @Override
@@ -58,6 +61,9 @@ public class AttendanceTeacherFragment extends android.support.v4.app.Fragment {
 
         fragmentsList = new ArrayList<>();
         fragmentsNameList = new ArrayList<>();
+        sessionManager = new SessionManager(getActivity());
+        userDetails = sessionManager.getUserDetails();
+        user = userDetails.get(SessionManager.KEY_USER_ROLE);
 
     }
 
@@ -68,7 +74,6 @@ public class AttendanceTeacherFragment extends android.support.v4.app.Fragment {
         // Inflate the layout for this fragment
         attendanceTabLayout = (TabLayout) rootView.findViewById(R.id.attendance_tab_layout);
         attendanceViewPager = (ViewPager) rootView.findViewById(R.id.attendance_view_pager);
-        user = MainActivity.userRole;
         setUpViewPager(attendanceViewPager);
 
         attendanceTabLayout.setupWithViewPager(attendanceViewPager);

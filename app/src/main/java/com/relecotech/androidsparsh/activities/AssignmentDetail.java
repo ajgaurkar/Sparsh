@@ -46,12 +46,14 @@ import com.microsoft.azure.storage.blob.ListBlobItem;
 import com.relecotech.androidsparsh.ConnectionDetector;
 import com.relecotech.androidsparsh.MainActivity;
 import com.relecotech.androidsparsh.R;
+import com.relecotech.androidsparsh.SessionManager;
 import com.relecotech.androidsparsh.adapters.AssignmentAttachmentAdapter;
 import com.relecotech.androidsparsh.controllers.AssignmentAttachmentListData;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import static com.relecotech.androidsparsh.activities.AssignmentPost.storageConnectionString;
 
@@ -112,6 +114,8 @@ public class AssignmentDetail extends AppCompatActivity {
     private CardView assignmentCommentPanel;
     private CardView assignmentAttachmentPanel;
     private AssignmentAttachmentAdapter assignmentAttachmentAdapter;
+    private SessionManager sessionManager;
+    private HashMap<String, String> userDetails;
 
 
     @Override
@@ -123,7 +127,9 @@ public class AssignmentDetail extends AppCompatActivity {
 
         connectionDetector = new ConnectionDetector(getApplicationContext());
         checkConnection = connectionDetector.isConnectingToInternet();
-        userRole = MainActivity.userRole;
+        sessionManager = new SessionManager(getApplicationContext());
+        userDetails = sessionManager.getUserDetails();
+        userRole = userDetails.get(SessionManager.KEY_USER_ROLE);
         Log.d("login_user_role", userRole);
 
 

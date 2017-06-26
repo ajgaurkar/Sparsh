@@ -111,7 +111,9 @@ public class AttendanceStudentIndividual extends Activity {
         System.out.println("selectedStudentId : " + selectedStudentId);
         System.out.println("selectedStudentName : " + selectedStudentName);
 
-        userRole = MainActivity.userRole;
+        sessionManager = new SessionManager(getApplicationContext());
+        userDetails = sessionManager.getUserDetails();
+        userRole = userDetails.get(SessionManager.KEY_USER_ROLE);
         Log.d("login_user_role", userRole);
 
         attendance_Handler = new Handler();
@@ -122,8 +124,7 @@ public class AttendanceStudentIndividual extends Activity {
         attendanceProgressDialog.setMessage(this.getString(R.string.loading));
         attendanceProgressDialog.setCancelable(false);
 
-        sessionManager = new SessionManager(getApplicationContext());
-        userDetails = sessionManager.getUserDetails();
+
         StudentAttendanceTable = MainActivity.mClient.getTable("Attendance");
         attendaceStudentHashMap = new HashMap<>();
 

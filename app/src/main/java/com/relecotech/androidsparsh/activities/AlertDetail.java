@@ -33,9 +33,11 @@ import com.relecotech.androidsparsh.ConnectionDetector;
 import com.relecotech.androidsparsh.DatabaseHandler;
 import com.relecotech.androidsparsh.MainActivity;
 import com.relecotech.androidsparsh.R;
+import com.relecotech.androidsparsh.SessionManager;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.HashMap;
 
 import static com.relecotech.androidsparsh.activities.AssignmentPost.storageConnectionString;
 
@@ -75,6 +77,8 @@ public class AlertDetail extends AppCompatActivity {
     private String s;
     private ImageView alertAttachmentIcon;
     private TextView alertsubmitedby;
+    private SessionManager sessionManager;
+    private HashMap<String, String> userDetails;
 
 
     @Override
@@ -96,7 +100,10 @@ public class AlertDetail extends AppCompatActivity {
         alertsubmitedby = (TextView) findViewById(R.id.alertdetailtextView20);
 
         attachmentDownloadProgressBar.setVisibility(View.INVISIBLE);
-        userRole = MainActivity.userRole;
+
+        sessionManager = new SessionManager(getApplicationContext());
+        userDetails = sessionManager.getUserDetails();
+        userRole = userDetails.get(SessionManager.KEY_USER_ROLE);
 
 
         File dir = new File(Environment.getExternalStorageDirectory(), "/Sparsh/Alert_Attachment_Download");

@@ -14,10 +14,13 @@ import android.widget.ListView;
 import com.relecotech.androidsparsh.DatabaseHandler;
 import com.relecotech.androidsparsh.MainActivity;
 import com.relecotech.androidsparsh.R;
+import com.relecotech.androidsparsh.SessionManager;
+import com.relecotech.androidsparsh.activities.Rewards;
 import com.relecotech.androidsparsh.adapters.NotificationAdapterAdapter;
 import com.relecotech.androidsparsh.controllers.NoticeListData;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by ajinkya on 12/20/2016.
@@ -38,6 +41,8 @@ public class Notifications extends Fragment {
     DatabaseHandler notifiactio_DatabaseHandler;
     NotificationAdapterAdapter notificationAdapterAdapter;
     Fragment fragment = null;
+    private SessionManager sessionManager;
+    private HashMap<String, String> userDetails;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -55,7 +60,9 @@ public class Notifications extends Fragment {
 //        } catch (NullPointerException nullPointer) {
 //            nullPointer.printStackTrace();
 //        }
-        userRole = MainActivity.userRole;
+        sessionManager = new SessionManager(getActivity());
+        userDetails = sessionManager.getUserDetails();
+        userRole = userDetails.get(SessionManager.KEY_USER_ROLE);
         //getString(R.string.login_user_role);
         loggedInUserForNotifications = userRole;
         Log.d("login_user_role", userRole);

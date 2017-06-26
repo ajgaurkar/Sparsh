@@ -101,7 +101,7 @@ public class ApproveLeave extends Activity {
 
         jsonObjectApproveLeaveParameters = new JsonObject();
         //Button visibility logic according to role and status
-        userRole = MainActivity.userRole;
+        userRole = userDetails.get(SessionManager.KEY_USER_ROLE);
 
         if (getBundleLeaveData.getString("Status").equals("Pending")) {
             Log.d("login_user_role1", userRole);

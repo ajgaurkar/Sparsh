@@ -95,10 +95,9 @@ public class ApproveNotes extends AppCompatActivity {
         notesDescriptionTextView.setText(String.valueOf(getBundleNotesData.getString("Description").replace("\\n", "\n")));
         replyEditText.setText(getBundleNotesData.getString("Reply").replace("\\n", "\n").replace("\\", ""));
 
-        userRole = MainActivity.userRole;
-
         sessionManager = new SessionManager(getApplicationContext());
         userDetails = sessionManager.getUserDetails();
+        userRole = userDetails.get(SessionManager.KEY_USER_ROLE);
 
         jsonObjectApproveNotesParameters = new JsonObject();
 

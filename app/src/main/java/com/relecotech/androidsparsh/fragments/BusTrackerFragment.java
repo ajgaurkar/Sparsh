@@ -118,7 +118,7 @@ public class BusTrackerFragment extends android.support.v4.app.Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.bustracker, container, false);
-        userRole = MainActivity.userRole;
+        userRole =userDetails.get(SessionManager.KEY_USER_ROLE);
         setHasOptionsMenu(true);
         busTrackerListDataArrayList = new ArrayList<>();
 

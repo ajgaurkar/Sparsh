@@ -144,12 +144,17 @@ public class Rewards extends AppCompatActivity {
         sportRewardsRatingListData = new ArrayList<>();
         extraCurricularRewardsRatingListData = new ArrayList<>();
 
-        userRole = MainActivity.userRole;
-        Log.d("login_user_role", userRole);
-        rewardJsonDataTable = MainActivity.mClient.getTable("rewards");
-        rewardStudentJsonDataTable = MainActivity.mClient.getTable("student");
         sessionManager = new SessionManager(Rewards.this);
         userDetails = sessionManager.getUserDetails();
+        userRole = userDetails.get(SessionManager.KEY_USER_ROLE);
+        Log.d("login_user_role", userRole);
+        try {
+            rewardJsonDataTable = MainActivity.mClient.getTable("rewards");
+            rewardStudentJsonDataTable = MainActivity.mClient.getTable("student");
+        } catch (Exception e) {
+            System.out.println("Rewards exception" + e.getMessage());
+        }
+
         rewardsRatingListDataHashMap = new HashMap<>();
         databaseHandler = new DatabaseHandler(Rewards.this);
         schoolClassData = databaseHandler.getTeacherClassDataByCursor();
